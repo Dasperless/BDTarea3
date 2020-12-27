@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AppWebBD.Models.EstadoCuenta>
+
+@{
+    ViewData["Title"] = "verEstadoDeCuenta";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Estado De Cuenta</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroCuenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaldoInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaldoFinal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroCuenta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaFin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaldoInicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaldoFinal)
+                </td>
+                <td>
+                    @Html.ActionLink("Movimientos", "mostrarMovimientos", new { EstadoCuentaid = item.id })<br />
+                    @Html.ActionLink("Buscar Movimiento", "movimientos", new { EstadoCuentaid = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

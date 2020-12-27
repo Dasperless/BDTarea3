@@ -1,0 +1,388 @@
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csprojAssemblyReference.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfoInputs.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfo.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.exe
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.input.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.output.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorCoreGenerate.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.Manifest.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.xml
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.deps.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.dev.json
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CopyComplete
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.genruntimeconfig.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CoreCompileInputs.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Index.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Details.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Login.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutUsuario.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\CuentasAhorro.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verBeneficiarios.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\eliminarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\agregarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\editarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verEstadoDeCuenta.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.exe
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.deps.json
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.json
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.dev.json
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csprojAssemblyReference.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfoInputs.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfo.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CoreCompileInputs.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.Manifest.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.xml
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\scopedcss\bundle\AppWebBD.styles.css
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.input.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.output.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorCoreGenerate.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\agregarBeneficiario.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\CuentasAhorro.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Details.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\editarBeneficiario.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\eliminarBeneficiario.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Index.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Login.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verBeneficiarios.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verEstadoDeCuenta.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutUsuario.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cache
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cs
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CopyComplete
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 1\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.genruntimeconfig.cache
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verTipoCuenta.cshtml.g.cs
+C:\Users\yeico\Desktop\BaseDeDatos-Proyecto1\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\agregarCliente.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.exe
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.deps.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.runtimeconfig.dev.json
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csprojAssemblyReference.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfoInputs.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.AssemblyInfo.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CoreCompileInputs.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorAssemblyInfo.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.input.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.TagHelpers.output.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorCoreGenerate.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\agregarCliente.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\CuentasAhorro.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Details.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Index.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\Login.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verBeneficiarios.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verEstadoDeCuenta.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verTipoCuenta.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutUsuario.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.RazorTargetAssemblyInfo.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.Views.pdb
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.csproj.CopyComplete
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.Manifest.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\staticwebassets\AppWebBD.StaticWebAssets.xml
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.dll
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.pdb
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.genruntimeconfig.cache
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\editarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\eliminarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\agregarBeneficiario.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\crearCuentaObjetivo.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verCuentaObj.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\editarCuentaObj.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\movimientos.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\mostrarMovimientos.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea2\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\movimientoEspecifico.cshtml.g.cs

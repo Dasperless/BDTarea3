@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AppWebBD.Models.MovimientoCuentaAhorro>
+
+@{
+    ViewData["Title"] = "mostrarMovimientos";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Movimientos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuevoSaldo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCuentaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoOperacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CuentaAhorroid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Monto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NuevoSaldo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoCuentaid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoOperacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CuentaAhorroid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("<--Volver", "volverIndex", new { })

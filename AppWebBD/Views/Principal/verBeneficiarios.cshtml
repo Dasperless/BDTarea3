@@ -1,0 +1,98 @@
+﻿@model AppWebBD.Models.Tablas
+
+@{
+    ViewData["Title"] = "verBeneficiarios";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+@{
+    List<Beneficiarios> listaBeneficiario = Model.ListaDeBeneficiarios;
+    List<Cliente> listaCliente = Model.ListaDeClientes;
+    List<Parentezco> listaParentezco = Model.ListaDeParentezcos;    
+}
+
+@{
+    if(@TempData["WarningPorcentage"]!= null){
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            @TempData["WarningPorcentage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+
+<h1>Beneficiarios</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ligado a la cuenta
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Identificación
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Fecha De Nacimiento
+            </th>
+            <th>
+                Telefono1
+            </th>
+            <th>
+                Telefono2
+            </th>
+            <th>
+                Parentezco
+            </th>
+            <th>
+                Porcentaje
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < listaBeneficiario.Count; i++)
+        {
+            <tr>
+                <td>
+                    @listaBeneficiario[i].NumeroCuenta
+                </td>
+                <td>
+                    @listaCliente[i].Nombre
+                </td>
+                <td>
+                    @listaBeneficiario[i].ValorDocumentoIdentidadBeneficiario
+                </td>
+                <td>
+                    @listaCliente[i].Email
+                </td>
+                <td>
+                    @listaCliente[i].FechaNacimiento
+                </td>
+                <td>
+                    @listaCliente[i].Telefono1
+                </td>
+                <td>
+                    @listaCliente[i].Telefono2
+                </td>
+                <td>
+                    @listaParentezco[i].Nombre
+                </td>
+                <td>
+                    @listaBeneficiario[i].Porcentaje
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "editarBeneficiario", new { ValorDocumentoIdentidadBeneficiario = @listaBeneficiario[i].ValorDocumentoIdentidadBeneficiario })
+                    @Html.ActionLink("\nEliminar", "eliminarBeneficiario", new { ValorDocumentoIdentidadBeneficiario = @listaBeneficiario[i].ValorDocumentoIdentidadBeneficiario, numeroCuenta = @listaBeneficiario[i].NumeroCuenta })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

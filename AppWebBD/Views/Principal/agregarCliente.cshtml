@@ -1,0 +1,62 @@
+﻿@model AppWebBD.Models.Cliente
+
+@{
+    ViewData["Title"] = "agregarCliente";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>agregarCliente</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="agregarCliente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorDocIdentidad" class="control-label"></label>
+                <input asp-for="ValorDocIdentidad" class="form-control" />
+                <span asp-validation-for="ValorDocIdentidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono1" class="control-label"></label>
+                <input asp-for="Telefono1" class="form-control" />
+                <span asp-validation-for="Telefono1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono2" class="control-label"></label>
+                <input asp-for="Telefono2" class="form-control" />
+                <span asp-validation-for="Telefono2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoDocIdentidadid" class="control-label"></label>
+                <input asp-for="TipoDocIdentidadid" class="form-control" />
+                <span asp-validation-for="TipoDocIdentidadid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@Html.ActionLink("<--Volver", "volverIndex", new { })
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

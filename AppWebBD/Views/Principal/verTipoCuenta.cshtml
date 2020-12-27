@@ -1,0 +1,78 @@
+﻿@model AppWebBD.Models.TipoCuentaAhorro
+
+@{
+    ViewData["Title"] = "verTipoCuenta";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Tipo Cuenta Ahorro</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Ahorro:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            Saldo Minimo:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaldoMinimo)@Html.DisplayFor(model => model.Simbolo)
+        </dd>
+        <dt class="col-sm-2">
+            Multa Por Saldo Minimo:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MultaSaldoMin)@Html.DisplayFor(model => model.Simbolo)
+        </dd>
+        <dt class="col-sm-2">
+            Cargo Anual:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CargoAnual)@Html.DisplayFor(model => model.Simbolo)
+        </dd>
+        <dt class="col-sm-2">
+            Retiros Fisicos:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumRetirosHumano)
+        </dd>
+        <dt class="col-sm-2">
+            Retiros Cajero Automático:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumRetirosAutomatico)
+        </dd>
+        <dt class="col-sm-2">
+            Comisión Fisica:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComisionHumano)@Html.DisplayFor(model => model.Simbolo)
+        </dd>
+        <dt class="col-sm-2">
+            Comisión Cajero Autómatico:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComisionAutomatico)@Html.DisplayFor(model => model.Simbolo)
+        </dd>
+        <dt class="col-sm-2">
+            Intereses:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Intereses)%
+        </dd>
+        <dt class="col-sm-2">
+            Cuenta en:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NombreMoneda)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("<--Volver", "volverIndex", new { })
+</div>

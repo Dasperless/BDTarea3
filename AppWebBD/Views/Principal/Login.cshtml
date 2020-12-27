@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    if(@TempData["ErrorLogin"] != null){
+        <div class = "alert alert-danger">
+            @TempData["ErrorLogin"]
+        </div>
+    }
+}
+<body>
+    <form asp-action = "Login">
+        <div class="form-group">
+            <label for="inputUser">Usuario</label>
+            <input type="name" class="form-control" id="inputUser" placeholder="Usuario" name="user">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Contraseña</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" name="pass">
+        </div>
+        <button  type="submit" class = "btn btn-primary">Login</button>
+    </form>
+</body>
+

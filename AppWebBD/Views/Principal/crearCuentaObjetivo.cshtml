@@ -1,0 +1,62 @@
+﻿@model AppWebBD.Models.CuentaObjetivo
+
+@{
+    ViewData["Title"] = "crearCuentaObjetivo";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>crearCuentaObjetivo</h1>
+
+<h4>CuentaObjetivo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="crearCuentaObjetivo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FechaInicio" class="control-label"></label>
+                <input type="date" asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaFin" class="control-label"></label>
+                <input type="date" asp-for="FechaFin" class="form-control" />
+                <span asp-validation-for="FechaFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Costo" class="control-label"></label>
+                <input asp-for="Costo" class="form-control" />
+                <span asp-validation-for="Costo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Objetivo" class="control-label"></label>
+                <input asp-for="Objetivo" class="form-control" />
+                <span asp-validation-for="Objetivo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Saldo" class="control-label"></label>
+                <input asp-for="Saldo" class="form-control" readonly />
+                <span asp-validation-for="Saldo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InteresesAcumulados" class="control-label"></label>
+                <input asp-for="InteresesAcumulados" class="form-control" readonly/>
+                <span asp-validation-for="InteresesAcumulados" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CuentaAhorroid" class="control-label"></label>
+                <input asp-for="CuentaAhorroid" class="form-control" readonly />
+                <span asp-validation-for="CuentaAhorroid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@Html.ActionLink("<--Volver", "volverIndex", new { })
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

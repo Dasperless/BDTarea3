@@ -1,0 +1,60 @@
+﻿@model AppWebBD.Models.Beneficiarios
+
+@{
+    ViewData["Title"] = "eliminarBeneficiario";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Eliminar Beneficiario</h1>
+
+
+<div>
+    <h4>Beneficiarios</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.id):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personaid):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personaid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CuentaAhorroid):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CuentaAhorroid)
+        </dd>
+        <dt class="col-sm-2">
+            Numero de Cuenta:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumeroCuenta)
+        </dd>
+        <dt class="col-sm-2">
+            Identidad:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ValorDocumentoIdentidadBeneficiario)
+        </dd>
+        <dt class="col-sm-2">
+            Parentesco:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParentezcoId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Porcentaje):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Porcentaje)
+        </dd>
+    </dl>
+    @Html.ActionLink("Eliminar", "eliminarConfirmed", new {id = Model.id,numeroCuenta = Model.NumeroCuenta})
+</div>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

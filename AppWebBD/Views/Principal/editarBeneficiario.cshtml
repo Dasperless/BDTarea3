@@ -1,0 +1,72 @@
+﻿@model AppWebBD.Models.Beneficiarios
+
+@{
+    ViewData["Title"] = "editarBeneficiario";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>editarBeneficiario</h1>
+
+<h4>Beneficiarios</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="editarBeneficiario">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" readonly />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Personaid" class="control-label"></label>
+                <input asp-for="Personaid" class="form-control" readonly />
+                <span asp-validation-for="Personaid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CuentaAhorroid" class="control-label"></label>
+                <input asp-for="CuentaAhorroid" class="form-control" readonly />
+                <span asp-validation-for="CuentaAhorroid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroCuenta" class="control-label"></label>
+                <input asp-for="NumeroCuenta" class="form-control" readonly />
+                <span asp-validation-for="NumeroCuenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorDocumentoIdentidadBeneficiario" class="control-label"></label>
+                <input asp-for="ValorDocumentoIdentidadBeneficiario" class="form-control" />
+                <span asp-validation-for="ValorDocumentoIdentidadBeneficiario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentezcoId" class="control-label"></label>
+                <select asp-for="ParentezcoId" class="form-control">
+                    <option value=1>Padre</option>
+                    <option value=2>Madre</option>
+                    <option value=3>Hijo</option>
+                    <option value=4>Hija</option>
+                    <option value=5>Hermano</option>
+                    <option value=6>Hermana</option>
+                    <option value=7>amigo</option>
+                    <option value=8>amiga</option>
+                    <option value=9>Pareja</option>
+                </select>
+                <span asp-validation-for="ParentezcoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje" class="control-label"></label>
+                <input asp-for="Porcentaje" class="form-control" />
+                <span asp-validation-for="Porcentaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@Html.ActionLink("<--Volver", "volverIndex", new { })
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

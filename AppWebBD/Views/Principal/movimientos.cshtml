@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "movimientos";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Movimientos ultimo Mes</h1>
+
+<form asp-action="movimientoEspecifico">
+    <input type="search" name="descripcion" id="input-search" placeholder="Buscar aqui" />
+    <button type="submit">
+        <img src="/lib/lupa2.png" width="15px" height="15px" />
+    </button>
+</form>
+
+
+
+

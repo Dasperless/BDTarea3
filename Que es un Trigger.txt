@@ -1,0 +1,4 @@
+Un grupo de sentencias que se ejecutan (detrás de la escena), asociadas a una tabla, al hacer
+insert, borrado, o delete. Aunque son convenientes para la solución de algunos problemas, el profesor
+no los favorece, pues es difícil localizar errores (tracing) y provoca bloqueos cuando la operación
+(insertar, modificar, borrar) si se realiza masivamente.

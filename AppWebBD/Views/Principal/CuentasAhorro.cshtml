@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AppWebBD.Models.CuentaAhorro>
+
+@{
+    ViewData["Title"] = "CuentasAhorro";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>CuentasAhorro</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Persona id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroCuenta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saldo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Personaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCuenta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saldo)
+            </td>
+            <td>
+                @Html.ActionLink("Ver los Beneficiarios", "verBeneficiarios", new { numeroCuenta = item.NumeroCuenta })<br />
+                @Html.ActionLink("Ver Estado de Cuenta", "verEstadoDeCuenta", new { numeroCuenta = item.NumeroCuenta })<br />
+                @Html.ActionLink("Agregar Beneficiario", "agregarBeneficiario", new { Personaid = item.Personaid, CuentaAhorroid = item.id, numeroCuenta = item.NumeroCuenta })<br />
+                @Html.ActionLink("Tipo de Cuenta", "verTipoCuenta", new { id = item.TipoCuentaid })<br />
+                @Html.ActionLink("Crear Cuenta Objetivo", "crearCuentaObjetivo", new { CuentaAhorroid = item.id, Saldo = item.Saldo, InteresesAcumulados = 0 })<br />
+                @Html.ActionLink("Ver Cuenta Objetivo", "verCuentaObj", new { cuentaAhorroId = item.id })<br />
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

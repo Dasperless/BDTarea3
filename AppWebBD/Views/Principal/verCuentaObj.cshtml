@@ -1,0 +1,77 @@
+﻿@model IEnumerable<AppWebBD.Models.CuentaObjetivo>
+
+@{
+    ViewData["Title"] = "verCuentaObj";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Cuenta Objetivo</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Costo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saldo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InteresesAcumulados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CuentaAhorroid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaFin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Costo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Objetivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Saldo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InteresesAcumulados)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CuentaAhorroid)
+                </td>
+                <td>
+                    @Html.ActionLink("Cambiar Descripcion", "editarCuentaObj", new {id = item.id })<br />
+                    @Html.ActionLink("Desactivar", "desactivarCuentaObj", new { id= item.id }) 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

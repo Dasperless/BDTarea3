@@ -1,0 +1,57 @@
+﻿@model AppWebBD.Models.Beneficiarios
+
+@{
+    ViewData["Title"] = "agregarBeneficiario";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>agregarBeneficiario</h1>
+
+<h4>Beneficiarios</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="agregarBeneficiario">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Personaid" class="control-label"></label>
+                <input asp-for="Personaid" class="form-control" readonly />
+                <span asp-validation-for="Personaid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CuentaAhorroid" class="control-label"></label>
+                <input asp-for="CuentaAhorroid" class="form-control" readonly />
+                <span asp-validation-for="CuentaAhorroid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroCuenta" class="control-label"></label>
+                <input asp-for="NumeroCuenta" class="form-control" readonly />
+                <span asp-validation-for="NumeroCuenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorDocumentoIdentidadBeneficiario" class="control-label"></label>
+                <input asp-for="ValorDocumentoIdentidadBeneficiario" class="form-control" />
+                <span asp-validation-for="ValorDocumentoIdentidadBeneficiario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentezcoId" class="control-label"></label>
+                <input asp-for="ParentezcoId" class="form-control" />
+                <span asp-validation-for="ParentezcoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porcentaje" class="control-label"></label>
+                <input asp-for="Porcentaje" class="form-control" />
+                <span asp-validation-for="Porcentaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@Html.ActionLink("<--Volver", "volverIndex", new { })
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

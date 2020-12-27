@@ -1,0 +1,22 @@
+<Fecha = 3/12/2020>
+ <Cuenta Num=1> como aparece una cuenta nueva se crea un estado de cuenta con fecha fin 
+		2/1/2021
+<Fecha >
+
+<Fecha= 4/12/2020>
+
+movimientos 
+movimientos
+movimientos 
+estos movimientos se agregan al estado de cuenta  porque la fecha no los supera
+<Fecha >
+
+
+<Fecha=5/1/2021>
+
+movimientos
+movimientos
+movimientos
+Estos movimientos superan la fecha fin entonces se se crea un estado de cuenta con fecha inicio 3/1/2021 y se agregan esos movimientos nuevos con la fecha correspondiente
+
+<Fecha>
