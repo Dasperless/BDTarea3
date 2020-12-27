@@ -40,5 +40,9 @@
    <Tipo_Movimiento Id="4" Nombre="Deposito en ATM" Tipo="Credito"/>
    <Tipo_Movimiento Id="5" Nombre="Deposito Ventana" Tipo="Credito"/>
    <Tipo_Movimiento Id="6" Nombre="Devolución de Compra" Tipo="Credito"/>
+   <Tipo_Movimiento Id="7" Nombre="Intereses del mes sobre saldo MInimo" Tipo="Credito"/>
+   <Tipo_Movimiento Id="8" Nombre="Comision exceso de operacion en CH" Tipo="Debito"/>
+   <Tipo_Movimiento Id="9" Nombre="Comision exceso de operacion en CA" Tipo="Debito"/>
+   <Tipo_Movimiento Id="10" Nombre="Multa por incumplimiento del saldo minimo" Tipo="Credito"/>
   </Tipo_Movimientos>
 </Catalogos>
