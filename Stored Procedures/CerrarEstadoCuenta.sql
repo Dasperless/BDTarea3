@@ -21,10 +21,6 @@ BEGIN
 		DECLARE @CuentaAhorroId INT,			--Id cuenta ahorros.
 				@MultaSaldoMin MONEY,			--Multa por el saldo minimo.
 				@SaldoMinEC MONEY,				--Saldo minimo en la cuenta.
-				@NumeroRetirosHumano INT,		--Cantidad de retiros maxima humano.
-				@NumeroRetirosAutomatico INT,	--Cantidad de retiros maxima cajero automatico.
-				@MultaNumRetirosCH MONEY,		--Multa por sobrepasar los retiros del cajero humano.
-				@MultaNumRetirosCA MONEY,		--Multa por sobrepasar los retiros del cajero automatico.
 				@Interes MONEY,					--Intereses.
 				@SaldoMinTC MONEY,				--Saldo minimo tipo de cuenta de ahorro.
 				@FechaMov DATE,					--Fecha del movimiento al cerrar el estado de cuenta
@@ -35,10 +31,6 @@ BEGIN
 		--Se guarda en las variables los valores relacionados con el estado de cuenta.
 		SELECT	@CuentaAhorroId = C.id,
 				@MultaSaldoMin = TC.MultaSaldoMin,
-				@NumeroRetirosHumano = TC.NumRetirosHumano,
-				@NumeroRetirosAutomatico = TC.NumRetirosAutomatico,
-				@MultaNumRetirosCH = TC.ComisionHumano,
-				@MultaNumRetirosCA = TC.ComisionAutomatico,
 				@Interes = TC.Interes,
 				@SaldoFinal = C.Saldo,
 				@FechaMov = EC.FechaFin,
@@ -84,7 +76,7 @@ BEGIN
 						@OutMovimientoIdMov OUTPUT, 
 						@OutResultCodeMov OUTPUT,
 						@OutNuevoSaldoMov OUTPUT
-			END
+			END;
 		ELSE 
 			BEGIN
 				EXEC [dbo].[InsertarMovimientos]
@@ -97,6 +89,8 @@ BEGIN
 						@OutResultCodeMov OUTPUT,
 						@OutNuevoSaldoMov OUTPUT
 			END;
+		SET @SaldoFinal = @OutNuevoSaldoMov	--Se modifica el saldo final si hay multa o intereses
+
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 
 		BEGIN TRANSACTION TSaveCerrEst

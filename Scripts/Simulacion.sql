@@ -17,7 +17,7 @@ INSERT @FechasProcesar (Fecha)
 SELECT ref.value('@Fecha', 'date')
 FROM @xmlData.nodes('Operaciones/FechaOperacion') xmlData(ref)
 
-DECLARE @fechaOperacionActual DATE	--Fecha de operacion actual
+DECLARE @fechaOperacionActual DATE	
 DECLARE @FechaOperacionXML XML		--Nodo XML de la fecha de operacion actual
 DECLARE @CuentaCierra INT			--Cuenta que cierra en la fecha de operacion
 
