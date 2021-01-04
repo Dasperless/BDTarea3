@@ -4,78 +4,118 @@ DECLARE @xmlData XML
 
 SET @xmlData = (
 		SELECT *
-		FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 2\BDTarea2\XML\Datos_Tarea_2_Catalogos.xml', SINGLE_BLOB) AS xmlData
+		FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3-Catalogos.xml', SINGLE_BLOB) AS xmlData
 		)
 
-
 --Inserta el tipo de documento de indentidad de los xml
-INSERT INTO TipoDocIdentidad (id, Nombre )
-SELECT	ref.value('@Id', 'int')
-		,ref.value('@Nombre', 'VARCHAR(100)')
+INSERT INTO TipoDocIdentidad (
+	id,
+	Nombre
+	)
+SELECT ref.value('@Id', 'int'),
+	ref.value('@Nombre', 'VARCHAR(100)')
 FROM @xmlData.nodes('Catalogos/Tipo_Doc/TipoDocuIdentidad') xmlData(ref)
-LEFT JOIN TipoDocIdentidad TD on TD.id =  ref.value('@Id', 'int')
+LEFT JOIN TipoDocIdentidad TD
+	ON TD.id = ref.value('@Id', 'int')
 WHERE TD.id IS NULL
 
 --Inserta los tipos de moneda
-INSERT INTO TipoMoneda (id, Nombre, Simbolo)
-SELECT	ref.value('@Id', 'int')
-		,ref.value('@Nombre', 'VARCHAR(100)')
-		,ref.value('@Simbolo', 'char(10)')
+INSERT INTO TipoMoneda (
+	id,
+	Nombre,
+	Simbolo
+	)
+SELECT ref.value('@Id', 'int'),
+	ref.value('@Nombre', 'VARCHAR(100)'),
+	ref.value('@Simbolo', 'char(10)')
 FROM @xmlData.nodes('Catalogos/Tipo_Moneda/TipoMoneda') xmlData(ref)
-LEFT JOIN TipoMoneda TM on TM.id =  ref.value('@Id', 'int')
+LEFT JOIN TipoMoneda TM
+	ON TM.id = ref.value('@Id', 'int')
 WHERE TM.id IS NULL
 
---Inserta los Catalogos del parentezco
-INSERT INTO Parentezco (ID, NOMBRE)
-SELECT	ref.value('@Id', 'int')
-		,ref.value('@Nombre', 'VARCHAR(100)')
+--Inserta los datos de parentezco.
+INSERT INTO Parentezco (
+	ID,
+	NOMBRE
+	)
+SELECT ref.value('@Id', 'int'),
+	ref.value('@Nombre', 'VARCHAR(100)')
 FROM @xmlData.nodes('Catalogos/Parentezcos/Parentezco') xmlData(ref)
-LEFT JOIN Parentezco P on P.id =  ref.value('@Id', 'int')
+LEFT JOIN Parentezco P
+	ON P.id = ref.value('@Id', 'int')
 WHERE P.id IS NULL
 
---Inserta los datos de tipo de cuenta ahorro
+--Crea el catalogo de los tipos de cuenta de ahorro.
 INSERT INTO TipoCuentaAhorro (
-	id
-	,Nombre
-	,IdTipoMoneda
-	,SaldoMinimo
-	,MultaSaldoMin
-	,CargoAnual
-	,NumRetirosHumano
-	,NumRetirosAutomatico
-	,ComisionHumano
-	,ComisionAutomatico
-	,Interes
+	id,
+	Nombre,
+	IdTipoMoneda,
+	SaldoMinimo,
+	MultaSaldoMin,
+	CargoAnual,
+	NumRetirosHumano,
+	NumRetirosAutomatico,
+	ComisionHumano,
+	ComisionAutomatico,
+	Interes
 	)
-SELECT	ref.value('@Id', 'int')
-		,ref.value('@Nombre', 'varchar(100)')
-		,ref.value('@IdTipoMoneda', 'int')
-		,ref.value('@SaldoMinimo', 'money')
-		,ref.value('@MultaSaldoMin', 'float')
-		,ref.value('@CargoMensual', 'float')
-		,ref.value('@NumRetirosHumano', 'int')
-		,ref.value('@NumRetirosAutomatico', 'int')
-		,ref.value('@ComisionHumano', 'int')
-		,ref.value('@ComisionAutomatico', 'int')
-		,ref.value('@Interes', 'int')
+SELECT ref.value('@Id', 'int'),
+	ref.value('@Nombre', 'varchar(100)'),
+	ref.value('@IdTipoMoneda', 'int'),
+	ref.value('@SaldoMinimo', 'money'),
+	ref.value('@MultaSaldoMin', 'float'),
+	ref.value('@CargoMensual', 'float'),
+	ref.value('@NumRetirosHumano', 'int'),
+	ref.value('@NumRetirosAutomatico', 'int'),
+	ref.value('@ComisionHumano', 'int'),
+	ref.value('@ComisionAutomatico', 'int'),
+	ref.value('@Interes', 'int')
 FROM @xmlData.nodes('Catalogos/Tipo_Cuenta_Ahorros/TipoCuentaAhorro') xmlData(ref)
-LEFT JOIN TipoCuentaAhorro TC on TC.id =  ref.value('@Id', 'int')
+LEFT JOIN TipoCuentaAhorro TC
+	ON TC.id = ref.value('@Id', 'int')
 WHERE TC.id IS NULL
 
-INSERT INTO TipoMovimientoCuentaAhorro(
-		id
-		,Nombre
-		,TipoOperacion
+--Crea el catalogo de los tipos de movimientos de una cuenta de ahorro
+INSERT INTO TipoMovimientoCuentaAhorro (
+	id,
+	Nombre,
+	TipoOperacion
 	)
-SELECT	ref.value('@Id', 'int')
-		,ref.value('@Nombre', 'varchar(50)')
-		,ref.value('@Tipo', 'varchar(50)')
+SELECT ref.value('@Id', 'int'),
+	ref.value('@Nombre', 'varchar(50)'),
+	ref.value('@Tipo', 'varchar(50)')
 FROM @xmlData.nodes('Catalogos/Tipo_Movimientos/Tipo_Movimiento ') xmlData(ref)
-LEFT JOIN TipoMovimientoCuentaAhorro TM ON TM.id = ref.value('@Id', 'int')
+LEFT JOIN TipoMovimientoCuentaAhorro TM
+	ON TM.id = ref.value('@Id', 'int')
 WHERE TM.id IS NULL
+
+--Crea el catalogo con los tipos de movimiento de las cuentas objetivo. 
+INSERT INTO TMovCuentaObj (
+	id,
+	nombre
+	)
+SELECT ref.value('@Id', 'INT'),
+	ref.value('@Nombre', 'varchar(50)')
+FROM @xmlData.nodes('Catalogos/Tipo_Movimientos/TiposMovimientoCuentaAhorro ') xmlData(ref)
+LEFT JOIN TMovCuentaObj TMCuentaObj
+	ON TMCuentaObj.id = ref.value('@Id', 'int')
+WHERE TMCuentaObj.id IS NULL
+
+--Crea el catalgo con los tipos de eventos 
+INSERT INTO TiposEvento (
+	Id,
+	Nombre
+	)
+SELECT ref.value('@Id', 'INT'),
+	ref.value('@Nombre', 'varchar(50)')
+FROM @xmlData.nodes('Catalogos/TiposEvento/TipoEvento ') xmlData(ref)
+LEFT JOIN TiposEvento TEventos
+	ON TEventos.id = ref.value('@Id', 'int')
+WHERE TEventos.id IS NULL
 
 SELECT * FROM TipoDocIdentidad
 SELECT * FROM TipoMoneda
 SELECT * FROM Parentezco
 SELECT * FROM TipoCuentaAhorro
 SELECT * FROM TipoMovimientoCuentaAhorro
+SELECT * FROM TiposEvento
