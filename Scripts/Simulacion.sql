@@ -78,7 +78,7 @@ BEGIN
 	FROM @FechasProcesar F
 	WHERE F.sec = @lo
 
-	--Se le asigna a @FechaOperacionXML el nodo XML de la fecha a procesar actual
+	--Guardo los datos de un nodo xml si la fecha es igual a la fecha de operacion actual
 	SELECT @FechaOperacionXML = xmlData.ref.query('.')
 	FROM @xmlData.nodes('Operaciones/FechaOperacion') AS xmlData(ref)
 	WHERE ref.value('@Fecha', 'date') = @fechaOperacionActual
@@ -106,7 +106,8 @@ BEGIN
 		ref.value('@NumeroCuenta', 'varchar(100)'),
 		U.id
 	FROM @FechaOperacionXML.nodes('FechaOperacion/UsuarioPuedeVer') xmlData(ref)
-	INNER JOIN Usuario U ON U.NombreUsuario = ref.value('@User', 'varchar(100)')
+	INNER JOIN Usuario U
+		ON U.NombreUsuario = ref.value('@User', 'varchar(100)')
 
 	--Se insertan las personas.
 	INSERT INTO Persona (
@@ -128,7 +129,8 @@ BEGIN
 		ref.value('@TipoDocuIdentidad', 'int'),
 		U.id
 	FROM @FechaOperacionXML.nodes('FechaOperacion/Persona') xmlData(ref)
-	LEFT JOIN Usuario U ON U.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidad', 'int')
+	LEFT JOIN Usuario U
+		ON U.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidad', 'int')
 
 	--Se insertan las cuentas de ahorro y el trigger crea el primer estado de cuenta.
 	INSERT INTO CuentaAhorro (
@@ -144,7 +146,8 @@ BEGIN
 		@fechaOperacionActual,
 		0
 	FROM @FechaOperacionXML.nodes('FechaOperacion/Cuenta') xmlData(ref)
-	INNER JOIN Persona P ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadDelCliente', 'int')
+	INNER JOIN Persona P
+		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadDelCliente', 'int')
 
 	--Se insertan los beneficiarios.
 	INSERT INTO Beneficiarios (
@@ -166,8 +169,10 @@ BEGIN
 		1,
 		NULL
 	FROM @FechaOperacionXML.nodes('FechaOperacion/Beneficiario') xmlData(ref)
-	INNER JOIN Persona P ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadBeneficiario', 'int')
-	INNER JOIN CuentaAhorro C ON C.NumeroCuenta = ref.value('@NumeroCuenta', 'int')
+	INNER JOIN Persona P
+		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadBeneficiario', 'int')
+	INNER JOIN CuentaAhorro C
+		ON C.NumeroCuenta = ref.value('@NumeroCuenta', 'int')
 
 	--Se insertan en la tabla movimientos los datos de la fecha operacion actual.
 	INSERT INTO @TablaMovimientos (
@@ -177,14 +182,15 @@ BEGIN
 		Descripcion,
 		CuentaAhorroId
 		)
-	SELECT	ref.value('@Tipo', 'int'),
-			ref.value('@Monto', 'money'),
-			@fechaOperacionActual,
-			ref.value('@Descripcion', 'varchar(100)'),
-			E.CuentaAhorroid
+	SELECT ref.value('@Tipo', 'int'),
+		ref.value('@Monto', 'money'),
+		@fechaOperacionActual,
+		ref.value('@Descripcion', 'varchar(100)'),
+		E.CuentaAhorroid
 	FROM @FechaOperacionXML.nodes('FechaOperacion/Movimientos') xmlData(ref)
-	JOIN EstadoCuenta E ON E.FechaInicio = @fechaOperacionActual
-		AND E.NumeroCuenta = ref.value('@CodigoCuenta', 'int')
+	JOIN EstadoCuenta E
+		ON E.FechaInicio = @fechaOperacionActual
+			AND E.NumeroCuenta = ref.value('@CodigoCuenta', 'int')
 
 	--Se inicializa los contadores para 
 	SELECT	@lo1 = MIN(sec),
@@ -222,7 +228,7 @@ BEGIN
 	INSERT @CuentasCierran (EstadoCuentaId)
 	SELECT id
 	FROM EstadoCuenta
-	WHERE DATEADD(MONTH, 1 ,FechaInicio) = @fechaOperacionActual
+	WHERE FechaFin = @fechaOperacionActual
 
 	--Se inicializan los contadores.
 	SELECT	@lo2 = MIN(Sec),
@@ -235,7 +241,7 @@ BEGIN
 			--Id del estado de cuenta que cierra la fecha de operacion actual.
 			SELECT @CuentaCierra = EstadoCuentaId
 			FROM @CuentasCierran
-			WHERE sec =@lo2	
+			WHERE sec = @lo2	
 
 			--Cierra los estados de cuenta que cierran la fecha de operacion actual.
 			EXEC	[dbo].[CerrarEstadoCuenta]
@@ -245,7 +251,7 @@ BEGIN
 			
 			--SELECT @OutResultCodeCerrarCuenta
 
-			SELECT @FechaInicioEC = FechaFin
+			SELECT @FechaInicioEC = DATEADD(DAY,1,FechaFin)
 			FROM [dbo].[EstadoCuenta]
 			WHERE id = @CuentaCierra
 
@@ -263,7 +269,7 @@ BEGIN
 			)
 			SELECT	CA.id
 					,CA.NumeroCuenta
-					,DATEADD(DAY, 1, @FechaInicioEC)
+					,@FechaInicioEC
 					,DATEADD(DAY,-1, DATEADD(month, 1, @FechaInicioEC))
 					,CA.Saldo
 					,0
