@@ -64,7 +64,7 @@ BEGIN
 			END;
 		
 		--Calcular los intereses 
-		IF(@SaldoMinEC > @SaldoMinTC)
+		IF(@SaldoMinEC > @SaldoMinTC )
 			BEGIN
 				DECLARE @InteresCalculado MONEY = [dbo].[CalcularInteres](@SaldoFinal, @Interes)
 				EXEC [dbo].[InsertarMovimientos]
@@ -77,7 +77,7 @@ BEGIN
 						@OutResultCodeMov OUTPUT,
 						@OutNuevoSaldoMov OUTPUT
 			END;
-		ELSE 
+		IF(@SaldoMinEC < @SaldoMinTC AND (@SaldoFinal - @MultaSaldoMin) > 0)
 			BEGIN
 				EXEC [dbo].[InsertarMovimientos]
 						@CuentaAhorroId, 

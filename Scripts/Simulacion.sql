@@ -1,87 +1,82 @@
-USE ProyectoBD1
---Se guarda en xmlData el .XML
-DECLARE @xmlData XML
--- Nota: cambiar el path del from C:\Users\yeico\Desktop\BDTarea2\XML\catalogos.xml
-SET @xmlData = (
-		SELECT *
-		FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 2\BDTarea2\XML\Datos_Tarea_2.xml', SINGLE_BLOB) AS xmlData
+	USE ProyectoBD1
+	DECLARE @xmlData XML
+	-- Nota: cambiar el path del from C:\Users\yeico\Desktop\BDTarea2\XML\Datos-Tarea3.xml
+	SET @xmlData = (
+			SELECT *
+			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			)
+
+	--Se declaran las tablas.
+	DECLARE @TablaFechasOperacion TABLE (
+		Sec INT identity(1, 1),
+		Fecha DATE
+		) 
+
+	DECLARE @TablaCuentaCierran TABLE (
+		Sec INT identity(1, 1),
+		EstadoCuentaId INT
+	)
+
+	DECLARE @TablaMovimientos TABLE(
+		Sec INT identity(1,1),
+		TipoMovimiento INT,
+		Monto MONEY,
+		Fecha DATE,
+		Descripcion VARCHAR(200),
+		CuentaAhorroId INT
 		)
 
---Tabla con las fechas que se van a procesar
-DECLARE @FechasProcesar TABLE (
-	Sec INT identity(1, 1),
-	Fecha DATE
-	) 
+	--Se declaran variables.
+	DECLARE @fechaOperacion DATE,
+			@fechaFinal DATE
 
-INSERT @FechasProcesar (Fecha)
-SELECT ref.value('@Fecha', 'date')
-FROM @xmlData.nodes('Operaciones/FechaOperacion') xmlData(ref)
+	DECLARE @DatosFechaOperacion XML,		--Nodo XML de la fecha de operacion actual
+			@CuentaCierra INT			
 
-DECLARE @fechaOperacionActual DATE	
-DECLARE @FechaOperacionXML XML		--Nodo XML de la fecha de operacion actual
-DECLARE @CuentaCierra INT			--Cuenta que cierra en la fecha de operacion
+	DECLARE	@CuentaId INT,
+			@TipoMovimientos INT,
+			@Monto MONEY,
+			@Fecha DATE,
+			@Descripcion VARCHAR(200),
+			@OutMovimientoIdMov INT,
+			@OutResultCodeMov INT,
+			@OutNuevoSaldoMov INT
 
---Tablas con cierre de las cuentas.
-DECLARE @CuentasCierran TABLE (
-	Sec INT identity(1, 1),
-	EstadoCuentaId INT
-	)
+	DECLARE	@OutMovimientoIdCerrarCuenta INT, 
+			@OutResultCodeCerrarCuenta INT
 
---Tabla de movimientos
-DECLARE @TablaMovimientos TABLE(
-	Sec INT identity(1,1),
-	TipoMovimiento INT,
-	Monto MONEY,
-	Fecha DATE,
-	Descripcion VARCHAR(200),
-	CuentaAhorroId INT
-	)
+	DECLARE @FechaInicioEC DATE
 
---Variables para insertar movimientos
-DECLARE	@CuentaId INT,
-		@TipoMovimientos INT,
-		@Monto MONEY,
-		@Fecha DATE,
-		@Descripcion VARCHAR(200),
-		@OutMovimientoIdMov INT,
-		@OutResultCodeMov INT,
-		@OutNuevoSaldoMov INT
+	--Contadores insertar movimientos
+	DECLARE @lo INT,
+			@hi INT
 
---Output del SP de cerrar cuenta. 
-DECLARE	@OutMovimientoIdCerrarCuenta INT, 
-		@OutResultCodeCerrarCuenta INT
+	--Contadores cerrar cuentas.
+	Declare @lo1 INT,
+			@hi1 INT
 
---Fecha fin estado de cuenta anterior.
-DECLARE @FechaInicioEC DATE
+	--Se inicializan las variables.
+	INSERT @TablaFechasOperacion (Fecha)
+	SELECT ref.value('@Fecha', 'date')
+	FROM @xmlData.nodes('Operaciones/FechaOperacion') fechaOperacion(ref)
 
---Contadores insertar datos XML
-DECLARE @lo INT = 1,
-		@hi INT	
+	SELECT @fechaOperacion = MIN(Fecha)
+	FROM @TablaFechasOperacion 
 
---Contadores insertar movimientos
-DECLARE @lo1 INT,
-		@hi1 INT
+	SELECT @fechaFinal = MAX(Fecha)
+	FROM @TablaFechasOperacion
 
---Contadores cerrar cuentas
-Declare @lo2 INT,
-		@hi2 INT
-
---Se le inicializa el contador @hi
-SELECT @hi = max(Sec)
-FROM @FechasProcesar
-
+	SELECT @hi = max(Sec)
+	FROM @TablaFechasOperacion
+	
 SET NOCOUNT ON
-WHILE @lo <= @hi
+WHILE @fechaOperacion <= @fechaFinal
 BEGIN
-	--Se le asigna la fecha actual a procesar a @fechaOperacionACtual
-	SELECT @fechaOperacionActual = F.Fecha
-	FROM @FechasProcesar F
-	WHERE F.sec = @lo
 
 	--Guardo los datos de un nodo xml si la fecha es igual a la fecha de operacion actual
-	SELECT @FechaOperacionXML = xmlData.ref.query('.')
-	FROM @xmlData.nodes('Operaciones/FechaOperacion') AS xmlData(ref)
-	WHERE ref.value('@Fecha', 'date') = @fechaOperacionActual
+	SELECT @DatosFechaOperacion = fecha.ref.query('.')
+	FROM @xmlData.nodes('Operaciones/FechaOperacion') AS fecha(ref)
+	WHERE ref.value('@Fecha', 'date') = @fechaOperacion
 
 	--Se insertan los usuarios
 	INSERT INTO Usuario (
@@ -94,7 +89,7 @@ BEGIN
 		ref.value('@Pass', 'varchar(50)'),
 		ref.value('@ValorDocumentoIdentidad', 'int'),
 		ref.value('@EsAdministrador', 'bit')
-	FROM @FechaOperacionXML.nodes('FechaOperacion/Usuario') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/Usuario') AS datosUsuario(ref)
 
 	--Se insertan los usuarios puede ver.
 	INSERT INTO UsuarioPuedeVer (
@@ -103,11 +98,11 @@ BEGIN
 		Usuarioid
 		)
 	SELECT ref.value('@User', 'varchar(100)'),
-		ref.value('@NumeroCuenta', 'varchar(100)'),
+		ref.value('@Cuenta', 'varchar(100)'),
 		U.id
-	FROM @FechaOperacionXML.nodes('FechaOperacion/UsuarioPuedeVer') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/UsuarioPuedeVer') AS datosUsuarioPuedeVer(ref)
 	INNER JOIN Usuario U
-		ON U.NombreUsuario = ref.value('@User', 'varchar(100)')
+		ON U.ValorDocIdentidad = ref.value('@User', 'int')
 
 	--Se insertan las personas.
 	INSERT INTO Persona (
@@ -128,11 +123,11 @@ BEGIN
 		ref.value('@Telefono2', 'int'),
 		ref.value('@TipoDocuIdentidad', 'int'),
 		U.id
-	FROM @FechaOperacionXML.nodes('FechaOperacion/Persona') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/Persona') AS datosPersona(ref)
 	LEFT JOIN Usuario U
 		ON U.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidad', 'int')
 
-	--Se insertan las cuentas de ahorro y el trigger crea el primer estado de cuenta.
+	--Se insertan las cuentas de ahorro. [Nota]: Un trigger crea el primer estado de cuenta.
 	INSERT INTO CuentaAhorro (
 		Personaid,
 		TipoCuentaId,
@@ -143,9 +138,9 @@ BEGIN
 	SELECT P.id,
 		ref.value('@TipoCuentaId', 'int'),
 		ref.value('@NumeroCuenta', 'int'),
-		@fechaOperacionActual,
+		@fechaOperacion,
 		0
-	FROM @FechaOperacionXML.nodes('FechaOperacion/Cuenta') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/Cuenta') AS datosCuenta(ref)
 	INNER JOIN Persona P
 		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadDelCliente', 'int')
 
@@ -168,13 +163,13 @@ BEGIN
 		ref.value('@Porcentaje', 'int'),
 		1,
 		NULL
-	FROM @FechaOperacionXML.nodes('FechaOperacion/Beneficiario') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/Beneficiario') xmlData(ref)
 	INNER JOIN Persona P
 		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadBeneficiario', 'int')
 	INNER JOIN CuentaAhorro C
 		ON C.NumeroCuenta = ref.value('@NumeroCuenta', 'int')
 
-	--Se insertan en la tabla movimientos los datos de la fecha operacion actual.
+	--Se insertan en la tabla movimientos los movimientos de la fecha operacion actual.
 	INSERT INTO @TablaMovimientos (
 		TipoMovimiento,
 		Monto,
@@ -184,21 +179,21 @@ BEGIN
 		)
 	SELECT ref.value('@Tipo', 'int'),
 		ref.value('@Monto', 'money'),
-		@fechaOperacionActual,
+		@fechaOperacion,
 		ref.value('@Descripcion', 'varchar(100)'),
 		E.CuentaAhorroid
-	FROM @FechaOperacionXML.nodes('FechaOperacion/Movimientos') xmlData(ref)
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/Movimientos') AS datosMovimientos(ref)
 	JOIN EstadoCuenta E
-		ON E.FechaInicio = @fechaOperacionActual
+		ON @fechaOperacion BETWEEN E.FechaInicio AND E.FechaFin
 			AND E.NumeroCuenta = ref.value('@CodigoCuenta', 'int')
 
-	--Se inicializa los contadores para 
-	SELECT	@lo1 = MIN(sec),
-			@hi1 = MAX(Sec)
+	--Se inicializa los contadores de la tabla de movimientos.
+	SELECT	@lo = MIN(sec),
+			@hi = MAX(Sec)
 	FROM @TablaMovimientos
 
 	--Se insertan los movimientos 
-	WHILE @lo1 <= @hi1
+	WHILE @lo <= @hi
 		BEGIN
 			--Se asignan los valores a la variables que hay en la tabla de movimientos.
 			SELECT	@CuentaId = CuentaAhorroId,
@@ -207,7 +202,7 @@ BEGIN
 					@Fecha = Fecha,
 					@Descripcion = Descripcion
 			FROM @TablaMovimientos
-			WHERE Sec = @lo1
+			WHERE Sec = @lo
 
 			--Procedimiento que inserta los movimientos.
 			EXEC	[dbo].[InsertarMovimientos]
@@ -220,38 +215,35 @@ BEGIN
 					@OutResultCodeMov OUTPUT,
 					@OutNuevoSaldoMov OUTPUT
 
-			SET @Lo1 = @Lo1 + 1
+			SET @lo = @lo + 1
 		END;
-	DELETE @TablaMovimientos -- Se elimina los datos de la tabla movimientos.
+	-- Se elimina los datos de la tabla movimientos para no insertar movimientos repetidos.
+	DELETE @TablaMovimientos 
 
-	--Se insertan los estados de cuenta que cierran el día de la operacion actual en la tabla de @CuentasCierran
-	INSERT @CuentasCierran (EstadoCuentaId)
+	--Se insertan los estados de cuenta que cierran el día de la operacion actual en la tabla de @TablaCuentaCierran
+	INSERT @TablaCuentaCierran (EstadoCuentaId)
 	SELECT id
 	FROM EstadoCuenta
-	WHERE FechaFin = @fechaOperacionActual
+	WHERE FechaFin = @fechaOperacion
 
 	--Se inicializan los contadores.
-	SELECT	@lo2 = MIN(Sec),
-			@hi2 = max(sec)
-	FROM @CuentasCierran
+	SELECT	@lo1 = MIN(Sec),
+			@hi1 = MAX(sec)
+	FROM @TablaCuentaCierran
 
 	--Cierra los estados de cuenta que cierran en la fecha de operacion actual.
-	WHILE @lo2 <= @hi2
+	WHILE @lo1 <= @hi1
 		BEGIN
-			--Id del estado de cuenta que cierra la fecha de operacion actual.
 			SELECT @CuentaCierra = EstadoCuentaId
-			FROM @CuentasCierran
-			WHERE sec = @lo2	
+			FROM @TablaCuentaCierran
+			WHERE sec = @lo1	
 
-			--Cierra los estados de cuenta que cierran la fecha de operacion actual.
 			EXEC	[dbo].[CerrarEstadoCuenta]
 					@CuentaCierra,
 					@OutMovimientoIdCerrarCuenta OUTPUT, 
 					@OutResultCodeCerrarCuenta OUTPUT
-			
-			--SELECT @OutResultCodeCerrarCuenta
-
-			SELECT @FechaInicioEC = DATEADD(DAY,1,FechaFin)
+	
+			SELECT @FechaInicioEC = DATEADD(DAY, 1, FechaFin)
 			FROM [dbo].[EstadoCuenta]
 			WHERE id = @CuentaCierra
 
@@ -280,20 +272,27 @@ BEGIN
 			INNER JOIN [dbo].[EstadoCuenta] EC ON EC.id = @CuentaCierra
 			WHERE CA.id = EC.CuentaAhorroid
 			
-			SET @Lo2 = @Lo2 + 1
+			SET @Lo1 = @Lo1 + 1
 		END;
-	DELETE @CuentasCierran
+	--Se eliminan las cuentas que cierran para evitar insertar repetidas.
+	DELETE @TablaCuentaCierran
 
-	SET @lo = @lo + 1
+	SET @fechaOperacion  = DATEADD(DAY, 1, @fechaOperacion)
 END;
+SELECT * FROM Usuario
+SELECT * FROM UsuarioPuedeVer
+SELECT * FROM Persona
+SELECT * FROM Beneficiarios
+SELECT * FROM CuentaAhorro 
+SELECT * FROM EstadoCuenta
+SELECT * FROM MovimientoCuentaAhorro
 
---SELECT * FROM Usuario
---SELECT * FROM UsuarioPuedeVer
---SELECT * FROM Persona
---SELECT * FROM Beneficiarios
-SELECT * FROM CuentaAhorro WHERE id = 7993
-SELECT * FROM EstadoCuenta WHERE CuentaAhorroid = 7993
-SELECT * FROM MovimientoCuentaAhorro Where CuentaAhorroid =7993
+--Select * 
+--FROM MovimientoCuentaAhorro MC 
+--INNER JOIN [dbo].[TipoMovimientoCuentaAhorro] TM
+--		ON TM.id =  MC.TipoMovimientoCuentaAhorroid
+--Where MC.CuentaAhorroid = 9203 And Tm.id = 3
+		
 
 --DELETE Usuario
 --DELETE UsuarioPuedeVer
