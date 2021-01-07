@@ -144,6 +144,32 @@ BEGIN
 	INNER JOIN Persona P
 		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadDelCliente', 'int')
 
+	--Se insertan las cuentas objetivo.
+	INSERT INTO CuentaObjetivo (
+		IdCuentaAhorro,
+		NumeroCuantaPrimaria,
+		NumeroCuentaObjetivo,
+		Costo,
+		DiaAhorro,
+		FechaInicio,
+		FechaFin,
+		Objetivo,
+		Saldo,
+		InteresesAcumulados
+		)
+	SELECT CA.id,
+		ref.value('@NumeroCuentaPrimaria', 'int'),
+		ref.value('@NumeroCuentaAhorro', 'int'),
+		ref.value('@MontoAhorro', 'money'),
+		ref.value('@DiaAhorro', 'int'),
+		@fechaOperacion,
+		ref.value('@FechaFinal', 'date'),
+		ref.value('@Descripcion', 'varchar(50)'),
+		0,
+		0
+	FROM @DatosFechaOperacion.nodes('FechaOperacion/CuentaAhorro') AS datosCuentaObj(ref)
+	INNER JOIN CuentaAhorro CA ON CA.NumeroCuenta = ref.value('@NumeroCuentaPrimaria', 'int')
+
 	--Se insertan los beneficiarios.
 	INSERT INTO Beneficiarios (
 		Personaid,
@@ -284,6 +310,7 @@ SELECT * FROM UsuarioPuedeVer
 SELECT * FROM Persona
 SELECT * FROM Beneficiarios
 SELECT * FROM CuentaAhorro 
+SELECT * FROM CuentaObjetivo
 SELECT * FROM EstadoCuenta
 SELECT * FROM MovimientoCuentaAhorro
 
@@ -295,6 +322,7 @@ SELECT * FROM MovimientoCuentaAhorro
 		
 
 --DELETE Usuario
+--DELETE CuentaObjetivo
 --DELETE UsuarioPuedeVer
 --DELETE EstadoCuenta
 --DELETE MovimientoCuentaAhorro

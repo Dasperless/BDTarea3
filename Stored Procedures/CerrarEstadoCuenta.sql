@@ -77,7 +77,7 @@ BEGIN
 						@OutResultCodeMov OUTPUT,
 						@OutNuevoSaldoMov OUTPUT
 			END;
-		IF(@SaldoMinEC < @SaldoMinTC AND (@SaldoFinal - @MultaSaldoMin) > 0)
+		IF(@SaldoMinEC < @SaldoMinTC AND (@SaldoFinal - @MultaSaldoMin) >= 0)
 			BEGIN
 				EXEC [dbo].[InsertarMovimientos]
 						@CuentaAhorroId, 
