@@ -31,7 +31,8 @@
 		IdCuentaObjetivo INT,
 		FechaInicio DATE,
 		FechaFin DATE,
-		Monto MONEY
+		Monto MONEY,
+		DiaAhorro INT
 	)
 
 	--Se declaran variables.
@@ -328,12 +329,14 @@ BEGIN
 		IdCuentaObjetivo,
 		FechaInicio,
 		FechaFin,
-		Monto
+		Monto,
+		DiaAhorro
 		)
 	SELECT CO.id,
 		CO.FechaInicio,
 		CO.FechaFin,
-		Co.MontoAhorro
+		CO.MontoAhorro,
+		CO.DiaAhorro
 	FROM [dbo].[CuentaObjetivo] CO
 	WHERE @fechaOperacion BETWEEN CO.FechaInicio
 			AND CO.FechaFin 
@@ -348,11 +351,12 @@ BEGIN
 			SELECT	@CuentaAhorra = IdCuentaObjetivo,
 					@FechaInicioCO = FechaInicio,
 					@FechaFinalCO = FechaFin,
-					@Monto = Monto
+					@Monto = Monto,
+					@DiaAhorro = DiaAhorro
 			FROM @TablaCuentaObjetivo
 			WHERE Sec = @lo2
 
-			IF(DATEPART(DAY, @fechaOperacion) = DATEPART(DAY, @FechaInicioCO))
+			IF(DATEPART(DAY, @fechaOperacion) = @DiaAhorro)
 				BEGIN
 					EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 							@CuentaAhorra, 
@@ -395,5 +399,6 @@ SELECT * FROM MovimientoCuentaAhorro
 --DELETE CuentaAhorro
 --DELETE Persona
 --DELETE Beneficiarios
-SELECT * FROM [dbo].[Errores]
-SELECT * FROM TMovCuentaObj
+
+--SELECT * FROM [dbo].[Errores]
+--SELECT * FROM TMovCuentaObj
