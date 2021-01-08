@@ -26,7 +26,23 @@
 		CuentaAhorroId INT
 		)
 
+	DECLARE @TablaCuentaObjetivo TABLE(
+		Sec INT IDENTITY(1,1),
+		IdCuentaObjetivo INT,
+		FechaInicio DATE,
+		FechaFin DATE,
+		Monto MONEY
+	)
+
 	--Se declaran variables.
+	DECLARE @CuentaAhorra INT,
+			@DiaAhorro INT,
+			@FechaInicioCO DATE,
+			@FechaFinalCO DATE,
+			@OutMovimientoCuentaObjId INT, 
+			@OutNuevoSaldo INT,
+			@OutResultCode INT
+
 	DECLARE @fechaOperacion DATE,
 			@fechaFinal DATE
 
@@ -54,6 +70,10 @@
 	--Contadores cerrar cuentas.
 	Declare @lo1 INT,
 			@hi1 INT
+
+	--Contadores cerrar cuentas.
+	Declare @lo2 INT,
+			@hi2 INT
 
 	--Se inicializan las variables.
 	INSERT @TablaFechasOperacion (Fecha)
@@ -147,9 +167,9 @@ BEGIN
 	--Se insertan las cuentas objetivo.
 	INSERT INTO CuentaObjetivo (
 		IdCuentaAhorro,
-		NumeroCuantaPrimaria,
+		NumeroCuentaPrimaria,
 		NumeroCuentaObjetivo,
-		Costo,
+		MontoAhorro,
 		DiaAhorro,
 		FechaInicio,
 		FechaFin,
@@ -303,6 +323,50 @@ BEGIN
 	--Se eliminan las cuentas que cierran para evitar insertar repetidas.
 	DELETE @TablaCuentaCierran
 
+	--Se ingresan los datos de las cuentas objetivo que se crean o es el día de ahorro.
+	INSERT INTO @TablaCuentaObjetivo (
+		IdCuentaObjetivo,
+		FechaInicio,
+		FechaFin,
+		Monto
+		)
+	SELECT CO.id,
+		CO.FechaInicio,
+		CO.FechaFin,
+		Co.MontoAhorro
+	FROM [dbo].[CuentaObjetivo] CO
+	WHERE @fechaOperacion BETWEEN CO.FechaInicio
+			AND CO.FechaFin 
+	
+	--Se inicializan los contadores de las cuentas objetivo.
+	SELECT	@lo2 = MIN(Sec),
+			@hi2 = MAX(sec)
+	FROM @TablaCuentaObjetivo
+
+	WHILE @lo2 <= @hi2
+		BEGIN
+			SELECT	@CuentaAhorra = IdCuentaObjetivo,
+					@FechaInicioCO = FechaInicio,
+					@FechaFinalCO = FechaFin,
+					@Monto = Monto
+			FROM @TablaCuentaObjetivo
+			WHERE Sec = @lo2
+
+			IF(DATEPART(DAY, @fechaOperacion) = DATEPART(DAY, @FechaInicioCO))
+				BEGIN
+					EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
+							@CuentaAhorra, 
+							1, 
+							@fechaOperacion, 
+							@Monto, 
+							@OutMovimientoCuentaObjId OUTPUT, 
+							@OutNuevoSaldo OUTPUT, 
+							@OutResultCode OUTPUT
+				END;
+			SET @Lo2 = @Lo2 + 1
+		END;
+	DELETE @TablaCuentaObjetivo
+
 	SET @fechaOperacion  = DATEADD(DAY, 1, @fechaOperacion)
 END;
 SELECT * FROM Usuario
@@ -311,8 +375,9 @@ SELECT * FROM Persona
 SELECT * FROM Beneficiarios
 SELECT * FROM CuentaAhorro 
 SELECT * FROM CuentaObjetivo
+SELECT * FROM MovCuentaObj
 SELECT * FROM EstadoCuenta
-SELECT * FROM MovimientoCuentaAhorro
+SELECT * FROM MovimientoCuentaAhorro 
 
 --Select * 
 --FROM MovimientoCuentaAhorro MC 
@@ -326,6 +391,9 @@ SELECT * FROM MovimientoCuentaAhorro
 --DELETE UsuarioPuedeVer
 --DELETE EstadoCuenta
 --DELETE MovimientoCuentaAhorro
+--DELETE MovCuentaObj
 --DELETE CuentaAhorro
 --DELETE Persona
 --DELETE Beneficiarios
+SELECT * FROM [dbo].[Errores]
+SELECT * FROM TMovCuentaObj
