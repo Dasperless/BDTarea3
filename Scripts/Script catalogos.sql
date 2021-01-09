@@ -84,10 +84,21 @@ INSERT INTO TipoMovimientoCuentaAhorro (
 SELECT ref.value('@Id', 'int'),
 	ref.value('@Nombre', 'varchar(50)'),
 	ref.value('@Tipo', 'varchar(50)')
-FROM @xmlData.nodes('Catalogos/TipoMovimientos/TipoMovimiento  ') xmlData(ref)
+FROM @xmlData.nodes('Catalogos/TipoMovimientos/TipoMovimiento ') xmlData(ref)
 LEFT JOIN TipoMovimientoCuentaAhorro TM
 	ON TM.id = ref.value('@Id', 'int')
 WHERE TM.id IS NULL
+
+INSERT INTO TMovCuentaObjIntereses(
+		id,
+		Descripcion
+	)
+SELECT ref.value('@Id', 'INT'),
+	ref.value('@Nombre', 'varchar(50)')
+FROM @xmlData.nodes('Catalogos/TiposMovimientoCuentaAhorro/Tipo_Movimiento ') xmlData(ref)
+LEFT JOIN TMovCuentaObjIntereses TMCuentaObjInt
+	ON TMCuentaObjInt.id = ref.value('@Id', 'int')
+WHERE TMCuentaObjInt.id IS NULL
 
 --Crea el catalogo con los tipos de movimiento de las cuentas objetivo. 
 INSERT INTO TMovCuentaObj (
@@ -118,6 +129,7 @@ SELECT * FROM TipoMoneda
 SELECT * FROM Parentezco
 SELECT * FROM TipoCuentaAhorro
 SELECT * FROM TipoMovimientoCuentaAhorro
+SELECT * FROM TMovCuentaObjIntereses
 SELECT * FROM TMovCuentaObj
 SELECT * FROM TiposEvento
 

@@ -42,7 +42,9 @@
 			@FechaFinalCO DATE,
 			@OutMovimientoCuentaObjId INT, 
 			@OutNuevoSaldo INT,
-			@OutResultCode INT
+			@OutResultCode INT,
+			@OutRedimirCuentaObjetivoId INT,
+			@OutResultCodeCORedm INT
 
 	DECLARE @fechaOperacion DATE,
 			@fechaFinal DATE
@@ -176,7 +178,8 @@ BEGIN
 		FechaFin,
 		Objetivo,
 		Saldo,
-		InteresesAcumulados
+		InteresesAcumulados,
+		Estado
 		)
 	SELECT CA.id,
 		ref.value('@NumeroCuentaPrimaria', 'int'),
@@ -187,7 +190,8 @@ BEGIN
 		ref.value('@FechaFinal', 'date'),
 		ref.value('@Descripcion', 'varchar(50)'),
 		0,
-		0
+		0,
+		1
 	FROM @DatosFechaOperacion.nodes('FechaOperacion/CuentaAhorro') AS datosCuentaObj(ref)
 	INNER JOIN CuentaAhorro CA ON CA.NumeroCuenta = ref.value('@NumeroCuentaPrimaria', 'int')
 
@@ -346,6 +350,7 @@ BEGIN
 			@hi2 = MAX(sec)
 	FROM @TablaCuentaObjetivo
 
+	--Se Procesan las cuentas objetivo.
 	WHILE @lo2 <= @hi2
 		BEGIN
 			SELECT	@CuentaAhorra = IdCuentaObjetivo,
@@ -355,6 +360,15 @@ BEGIN
 					@DiaAhorro = DiaAhorro
 			FROM @TablaCuentaObjetivo
 			WHERE Sec = @lo2
+
+			IF(@fechaOperacion = @FechaFinalCO)
+				BEGIN
+					EXEC [dbo].[RedimirCuentaObjetivo] 
+						@CuentaAhorra,
+						@fechaOperacion, 
+						@OutRedimirCuentaObjetivoId OUTPUT,
+						@OutResultCodeCORedm OUTPUT	 		
+				END;
 
 			IF(DATEPART(DAY, @fechaOperacion) = @DiaAhorro)
 				BEGIN
@@ -373,13 +387,14 @@ BEGIN
 
 	SET @fechaOperacion  = DATEADD(DAY, 1, @fechaOperacion)
 END;
-SELECT * FROM Usuario
-SELECT * FROM UsuarioPuedeVer
-SELECT * FROM Persona
-SELECT * FROM Beneficiarios
+--SELECT * FROM Usuario
+--SELECT * FROM UsuarioPuedeVer
+--SELECT * FROM Persona
+--SELECT * FROM Beneficiarios
 SELECT * FROM CuentaAhorro 
-SELECT * FROM CuentaObjetivo
-SELECT * FROM MovCuentaObj
+SELECT * FROM CuentaObjetivo CO
+INNER JOIN MovCuentaObj M 
+ON M.IdCuentaObjetivo = CO.id
 SELECT * FROM EstadoCuenta
 SELECT * FROM MovimientoCuentaAhorro 
 

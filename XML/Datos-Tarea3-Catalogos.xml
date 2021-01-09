@@ -38,6 +38,8 @@
         <TipoMovimiento Id="7" Nombre="Interes del mes sobre saldo minimo" Tipo="Debito" />
         <TipoMovimiento Id="8" Nombre="Comision exceso de operacion en CH" Tipo="Debito" />
         <TipoMovimiento Id="9" Nombre="Comision exceso de operacion en CA" Tipo="Debito" />
+		<TipoMovimiento Id="10" Nombre="Retiro por ahorro en cuenta objetivo" Tipo="Debito" />
+		<TipoMovimiento Id="11" Nombre="Deposito por ahorro en cuenta objetivo" Tipo="Credito" />
     </TipoMovimientos>
     <TiposMovimientoCuentaAhorro>
         <Tipo_Movimiento Id="1" Nombre="Deposito por ahorro" />

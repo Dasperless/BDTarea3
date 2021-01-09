@@ -8,7 +8,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER PROCEDURE [dbo].[CerrarEstadoCuenta] @inEstadoCuentaId INT,
+ALTER PROCEDURE [dbo].[CerrarEstadoCuenta] 
+	@inEstadoCuentaId INT,
 	@OutMovimientoId INT OUTPUT,
 	@OutResultCode INT OUTPUT
 AS
