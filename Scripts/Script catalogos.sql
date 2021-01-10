@@ -124,14 +124,14 @@ LEFT JOIN TiposEvento TEventos
 	ON TEventos.id = ref.value('@Id', 'int')
 WHERE TEventos.id IS NULL
 
-SELECT * FROM TipoDocIdentidad
-SELECT * FROM TipoMoneda
-SELECT * FROM Parentezco
-SELECT * FROM TipoCuentaAhorro
-SELECT * FROM TipoMovimientoCuentaAhorro
-SELECT * FROM TMovCuentaObjIntereses
-SELECT * FROM TMovCuentaObj
-SELECT * FROM TiposEvento
+--SELECT * FROM TipoDocIdentidad
+--SELECT * FROM TipoMoneda
+--SELECT * FROM Parentezco
+--SELECT * FROM TipoCuentaAhorro
+--SELECT * FROM TipoMovimientoCuentaAhorro
+--SELECT * FROM TMovCuentaObjIntereses
+--SELECT * FROM TMovCuentaObj
+--SELECT * FROM TiposEvento
 
 --DELETE TipoDocIdentidad
 --DELETE TipoMoneda
