@@ -1,10 +1,10 @@
 USE ProyectoBD1
---Se lee el archivo XML   Ruta: C:\Users\yeico\Desktop\BDTarea2\XML\catalogos.xml jacob
+--Se lee el archivo XML   Ruta: C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3-Catalogos.xml
 DECLARE @xmlData XML
 
 SET @xmlData = (
 		SELECT *
-		FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3-Catalogos.xml', SINGLE_BLOB) AS xmlData
+		FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3-Catalogos.xml', SINGLE_BLOB) AS xmlData
 		)
 
 --Inserta el tipo de documento de indentidad de los xml
@@ -124,14 +124,14 @@ LEFT JOIN TiposEvento TEventos
 	ON TEventos.id = ref.value('@Id', 'int')
 WHERE TEventos.id IS NULL
 
---SELECT * FROM TipoDocIdentidad
---SELECT * FROM TipoMoneda
---SELECT * FROM Parentezco
---SELECT * FROM TipoCuentaAhorro
---SELECT * FROM TipoMovimientoCuentaAhorro
---SELECT * FROM TMovCuentaObjIntereses
---SELECT * FROM TMovCuentaObj
---SELECT * FROM TiposEvento
+SELECT * FROM TipoDocIdentidad
+SELECT * FROM TipoMoneda
+SELECT * FROM Parentezco
+SELECT * FROM TipoCuentaAhorro
+SELECT * FROM TipoMovimientoCuentaAhorro
+SELECT * FROM TMovCuentaObjIntereses
+SELECT * FROM TMovCuentaObj
+SELECT * FROM TiposEvento
 
 --DELETE TipoDocIdentidad
 --DELETE TipoMoneda
