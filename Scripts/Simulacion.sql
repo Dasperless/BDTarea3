@@ -1,9 +1,9 @@
 	USE ProyectoBD1
 	DECLARE @xmlData XML
-	-- Nota: cambiar el path del from C:\Users\yeico\Desktop\BDTarea2\XML\Datos-Tarea3.xml
+	-- Nota: cambiar el path del from C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
@@ -32,7 +32,9 @@
 		FechaInicio DATE,
 		FechaFin DATE,
 		Monto MONEY,
-		DiaAhorro INT
+		DiaAhorro INT,
+		Saldo MONEY,
+		InteresesAcumulados MONEY
 	)
 
 	--Se declaran variables.
@@ -51,6 +53,13 @@
 
 	DECLARE @DatosFechaOperacion XML,		--Nodo XML de la fecha de operacion actual
 			@CuentaCierra INT			
+	DECLARE   --Variables intereses jacob
+		@inIdCuentaObjetivoInt INT,    
+		@inIdTipoMovObjInt INT,
+		@inFechaInt DATE,
+		@inMontoInt MONEY,
+		@inNuevoIntAcumuladoInt MONEY,
+		@OutMovimientoCOInteresesId INT 
 
 	DECLARE	@CuentaId INT,
 			@TipoMovimientos INT,
@@ -166,7 +175,7 @@ BEGIN
 	FROM @DatosFechaOperacion.nodes('FechaOperacion/Cuenta') AS datosCuenta(ref)
 	INNER JOIN Persona P
 		ON P.ValorDocIdentidad = ref.value('@ValorDocumentoIdentidadDelCliente', 'int')
-
+	
 	--Se insertan las cuentas objetivo.
 	INSERT INTO CuentaObjetivo (
 		IdCuentaAhorro,
@@ -334,17 +343,46 @@ BEGIN
 		FechaInicio,
 		FechaFin,
 		Monto,
-		DiaAhorro
+		DiaAhorro,
+		Saldo,
+		InteresesAcumulados
 		)
 	SELECT CO.id,
 		CO.FechaInicio,
 		CO.FechaFin,
 		CO.MontoAhorro,
-		CO.DiaAhorro
+		CO.DiaAhorro,
+		CO.Saldo,
+		CO.InteresesAcumulados
 	FROM [dbo].[CuentaObjetivo] CO
 	WHERE @fechaOperacion BETWEEN CO.FechaInicio
 			AND CO.FechaFin 
+	--Se inicializan los contadores de las cuentas objetivo.
+	SELECT	@lo2 = MIN(Sec),
+			@hi2 = MAX(sec)
+	FROM @TablaCuentaObjetivo
 	
+	WHILE @lo2 <= @hi2
+	BEGIN
+		SELECT @inIdCuentaObjetivoInt = IdCuentaObjetivo
+			,@inIdTipoMovObjInt = 2
+			,@inFechaInt = @fechaOperacion
+			,@inMontoInt = Saldo
+			,@inNuevoIntAcumuladoInt = InteresesAcumulados
+		FROM @TablaCuentaObjetivo
+		WHERE Sec = @lo2
+
+		EXEC [dbo].[InsertarMovimientoCOIntereses] @inIdCuentaObjetivoInt
+			,@inIdTipoMovObjInt
+			,@inFechaInt
+			,@inMontoInt
+			,@inNuevoIntAcumuladoInt
+			,@OutMovimientoCOInteresesId OUTPUT
+			,@OutResultCode OUTPUT
+
+		SET @Lo2 = @Lo2 + 1
+	END;
+
 	--Se inicializan los contadores de las cuentas objetivo.
 	SELECT	@lo2 = MIN(Sec),
 			@hi2 = MAX(sec)
@@ -391,13 +429,13 @@ END;
 --SELECT * FROM UsuarioPuedeVer
 --SELECT * FROM Persona
 --SELECT * FROM Beneficiarios
-SELECT * FROM CuentaAhorro 
-SELECT * FROM CuentaObjetivo CO
-INNER JOIN MovCuentaObj M 
-ON M.IdCuentaObjetivo = CO.id
-SELECT * FROM EstadoCuenta
-SELECT * FROM MovimientoCuentaAhorro 
-
+--SELECT * FROM CuentaAhorro 
+--SELECT * FROM CuentaObjetivo CO
+--INNER JOIN MovCuentaObj M 
+--ON M.IdCuentaObjetivo = CO.id
+--SELECT * FROM EstadoCuenta
+--SELECT * FROM MovimientoCuentaAhorro 
+SELECT * FROM MovCuentaObjIntereses
 --Select * 
 --FROM MovimientoCuentaAhorro MC 
 --INNER JOIN [dbo].[TipoMovimientoCuentaAhorro] TM
