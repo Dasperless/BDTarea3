@@ -1,12 +1,12 @@
 USE [master]
 GO
-/****** Object:  Database [ProyectoBD1]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Database [ProyectoBD1]    Script Date: 1/14/2021 11:53:11 AM ******/
 CREATE DATABASE [ProyectoBD1]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'ProyectoBD1', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ProyectoBD1.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'ProyectoBD1', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ProyectoBD1.mdf' , SIZE = 73728KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'ProyectoBD1_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ProyectoBD1_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'ProyectoBD1_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ProyectoBD1_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [ProyectoBD1] SET COMPATIBILITY_LEVEL = 150
@@ -80,7 +80,7 @@ ALTER DATABASE [ProyectoBD1] SET QUERY_STORE = OFF
 GO
 USE [ProyectoBD1]
 GO
-/****** Object:  UserDefinedFunction [dbo].[CalcularInteres]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  UserDefinedFunction [dbo].[CalcularInteres]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,7 +100,7 @@ GO
     RETURN @Resultado; 
   END 
 GO
-/****** Object:  Table [dbo].[Beneficiarios]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Beneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ CREATE TABLE [dbo].[Beneficiarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[CuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ CREATE TABLE [dbo].[CuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[CuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -163,7 +163,7 @@ CREATE TABLE [dbo].[CuentaObjetivo](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DiaMesDeposito]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[DiaMesDeposito]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -178,7 +178,7 @@ CREATE TABLE [dbo].[DiaMesDeposito](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Errores]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Errores]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,7 +194,7 @@ CREATE TABLE [dbo].[Errores](
 	[GETDATE] [datetime] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EstadoCuenta]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[EstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -216,13 +216,13 @@ CREATE TABLE [dbo].[EstadoCuenta](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Eventos]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Eventos]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Eventos](
-	[id] [int] NOT NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL,
 	[idTipoEvento] [int] NOT NULL,
 	[idUser] [int] NOT NULL,
 	[IP] [varchar](50) NOT NULL,
@@ -235,7 +235,21 @@ CREATE TABLE [dbo].[Eventos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovCuentaObj]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[FechaOperacion]    Script Date: 1/14/2021 11:53:12 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FechaOperacion](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Fecha] [date] NOT NULL,
+ CONSTRAINT [PK_FechaOperacion] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[MovCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -253,7 +267,7 @@ CREATE TABLE [dbo].[MovCuentaObj](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovCuentaObjIntereses]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[MovCuentaObjIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -271,7 +285,7 @@ CREATE TABLE [dbo].[MovCuentaObjIntereses](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovimientoCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[MovimientoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -291,7 +305,7 @@ CREATE TABLE [dbo].[MovimientoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Parentezco]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Parentezco]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -305,7 +319,7 @@ CREATE TABLE [dbo].[Parentezco](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Persona]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Persona]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -326,7 +340,7 @@ CREATE TABLE [dbo].[Persona](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TipoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -349,7 +363,7 @@ CREATE TABLE [dbo].[TipoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoDocIdentidad]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TipoDocIdentidad]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -363,7 +377,7 @@ CREATE TABLE [dbo].[TipoDocIdentidad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoMoneda]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TipoMoneda]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -378,7 +392,7 @@ CREATE TABLE [dbo].[TipoMoneda](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoMovimientoCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TipoMovimientoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -393,7 +407,7 @@ CREATE TABLE [dbo].[TipoMovimientoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TiposEvento]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TiposEvento]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -407,7 +421,7 @@ CREATE TABLE [dbo].[TiposEvento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TMovCuentaObj]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TMovCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -421,7 +435,7 @@ CREATE TABLE [dbo].[TMovCuentaObj](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TMovCuentaObjIntereses]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[TMovCuentaObjIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -435,7 +449,7 @@ CREATE TABLE [dbo].[TMovCuentaObjIntereses](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -452,7 +466,7 @@ CREATE TABLE [dbo].[Usuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuarioPuedeVer]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  Table [dbo].[UsuarioPuedeVer]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -596,7 +610,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[UsuarioPuedeVer] CHECK CONSTRAINT [FK_UsuarioPuedeVer_Usuario]
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarMovimientoEspecifico]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[BuscarMovimientoEspecifico]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -650,7 +664,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[CerrarEstadoCuenta]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[CerrarEstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -777,7 +791,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ConsultaEstadoCuenta]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[ConsultaEstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -800,7 +814,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[CrearCuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[CrearCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -858,7 +872,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[DesactivacionCuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[DesactivacionCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -909,7 +923,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EditarBeneficiario]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[EditarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -974,7 +988,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarRecords]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[EliminarRecords]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1006,7 +1020,7 @@ BEGIN
 	SET NOCOUNT OFF;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarBeneficiarios]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1114,7 +1128,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1195,7 +1209,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarEstadosCuenta]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarEstadosCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1274,7 +1288,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCOIntereses]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCOIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1363,7 +1377,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1487,7 +1501,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientos]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1697,7 +1711,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarPersonas]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarPersonas]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1787,7 +1801,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarUsuarioJacob]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarUsuarioJacob]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1809,7 +1823,7 @@ BEGIN
 
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ModificarDescripcionCuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[ModificarDescripcionCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1861,7 +1875,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ProcesarMovimientos]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[ProcesarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1969,7 +1983,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[RedimirCuentaObjetivo]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[RedimirCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2066,7 +2080,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[selCO]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[selCO]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2084,7 +2098,7 @@ BEGIN
 	WHERE id = @id
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2136,7 +2150,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarMovimientos]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2188,7 +2202,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarPersona]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarPersona]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2241,7 +2255,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_AgregarBeneficiario]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_AgregarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2292,7 +2306,7 @@ BEGIN
 	RETURN @outErrorCode;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_BeneficiarioPorID]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_BeneficiarioPorID]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2308,7 +2322,7 @@ BEGIN
 	WHERE ValorDocumentoIdentidadBeneficiario = @ValorDocumentoIdentidadBeneficiario
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_CompararUsuario]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_CompararUsuario]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2325,7 +2339,7 @@ BEGIN
 	WHERE NombreUsuario = @Usuario and Pass = @Pass
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_EliminarBeneficiario]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_EliminarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2341,7 +2355,7 @@ BEGIN
 	WHERE id = @inId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ObtenerBeneficiarios]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_ObtenerBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2357,7 +2371,7 @@ BEGIN
 	WHERE NumeroCuenta = @NumeroCuenta and Activo = 1
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ObtenerParentezco]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_ObtenerParentezco]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2373,7 +2387,7 @@ BEGIN
 	WHERE id = @ParentezcoId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_SeleccionarCuentasAhorroUsuarioPuedeVer]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_SeleccionarCuentasAhorroUsuarioPuedeVer]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2398,7 +2412,7 @@ BEGIN
 	SET NOCOUNT OFF;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TipoCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TipoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2412,7 +2426,7 @@ BEGIN
 	WHERE id = @inTipoCuentaAhorroId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TipoMoneda]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TipoMoneda]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2427,7 +2441,7 @@ BEGIN
 	WHERE id = @inTipoMonedaId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TodoCuentaAhorro]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TodoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2440,7 +2454,7 @@ BEGIN
 	FROM CuentaAhorro
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VerificarPorcentajeBeneficiarios]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_VerificarPorcentajeBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2466,7 +2480,7 @@ BEGIN
 	RETURN @outErrorCode
 END
 GO
-/****** Object:  StoredProcedure [dbo].[VerCuentaObj]    Script Date: 1/10/2021 5:45:11 PM ******/
+/****** Object:  StoredProcedure [dbo].[VerCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
