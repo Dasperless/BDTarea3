@@ -3,7 +3,7 @@
 	-- Nota: cambiar el path del from C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
@@ -104,6 +104,15 @@
 SET NOCOUNT ON
 WHILE @fechaOperacion <= @fechaFinal
 BEGIN
+	IF NOT EXISTS (
+			SELECT *
+			FROM [dbo].[FechaOperacion]
+			WHERE Fecha = @fechaOperacion
+			)
+		BEGIN
+			INSERT INTO [dbo].[FechaOperacion] (Fecha)
+			VALUES (@fechaOperacion)
+		END;
 
 	--Guardo los datos de un nodo xml si la fecha es igual a la fecha de operacion actual
 	SELECT @DatosFechaOperacion = fecha.ref.query('.')
@@ -435,7 +444,8 @@ END;
 --ON M.IdCuentaObjetivo = CO.id
 --SELECT * FROM EstadoCuenta
 --SELECT * FROM MovimientoCuentaAhorro 
-SELECT * FROM MovCuentaObjIntereses
+--SELECT * FROM MovCuentaObjIntereses
+SELECT * FROM FechaOperacion
 --Select * 
 --FROM MovimientoCuentaAhorro MC 
 --INNER JOIN [dbo].[TipoMovimientoCuentaAhorro] TM
@@ -443,6 +453,7 @@ SELECT * FROM MovCuentaObjIntereses
 --Where MC.CuentaAhorroid = 9203 And Tm.id = 3
 		
 
+--DELETE Eventos
 --DELETE Usuario
 --DELETE CuentaObjetivo
 --DELETE UsuarioPuedeVer
@@ -452,6 +463,7 @@ SELECT * FROM MovCuentaObjIntereses
 --DELETE CuentaAhorro
 --DELETE Persona
 --DELETE Beneficiarios
+--DELETE FechaOperacion
 
 --SELECT * FROM [dbo].[Errores]
 --SELECT * FROM TMovCuentaObj

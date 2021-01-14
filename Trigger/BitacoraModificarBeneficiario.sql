@@ -20,7 +20,8 @@ BEGIN
 			@idUser INT,
 			@XMLAntes XML,
 			@XMLDespues XML = '',
-			@Ip VARCHAR(255)
+			@Ip VARCHAR(255),
+			@Fecha DATE
 
 	--Se le asignan valores 
 	SELECT @idUser = P.Usuarioid
@@ -49,6 +50,12 @@ BEGIN
 				ROOT('Beneficiarios')
 			)
 
+	SET @Fecha = (
+			SELECT TOP (1) *
+			FROM [dbo].[FechaOperacion]
+			ORDER BY id DESC
+			)	
+
 	--Se insertan el evento
 	INSERT INTO [dbo].[Eventos] (
 		idTipoEvento,
@@ -61,7 +68,7 @@ BEGIN
 	SELECT	@IdTipoEvento,
 			@idUser,
 			@Ip,
-			'2020-08-06', -- [NOTA]: No se como obtener la fecha de operacion
+			@Fecha,
 			@XMLAntes,
 			@XMLDespues
 	FROM inserted B
