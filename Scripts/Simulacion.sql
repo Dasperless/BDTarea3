@@ -39,6 +39,7 @@
 
 	--Se declaran variables.
 	DECLARE @CuentaAhorra INT,
+			@DiaFechaOperacion INT,
 			@DiaAhorro INT,
 			@FechaInicioCO DATE,
 			@FechaFinalCO DATE,
@@ -366,6 +367,7 @@ BEGIN
 	FROM [dbo].[CuentaObjetivo] CO
 	WHERE @fechaOperacion BETWEEN CO.FechaInicio
 			AND CO.FechaFin 
+
 	--Se inicializan los contadores de las cuentas objetivo.
 	SELECT	@lo2 = MIN(Sec),
 			@hi2 = MAX(sec)
@@ -408,6 +410,8 @@ BEGIN
 			FROM @TablaCuentaObjetivo
 			WHERE Sec = @lo2
 
+			SET @DiaFechaOperacion = DATEPART(DAY, @fechaOperacion)
+
 			IF(@fechaOperacion = @FechaFinalCO)
 				BEGIN
 					EXEC [dbo].[RedimirCuentaObjetivo] 
@@ -417,7 +421,8 @@ BEGIN
 						@OutResultCodeCORedm OUTPUT	 		
 				END;
 
-			IF(DATEPART(DAY, @fechaOperacion) = @DiaAhorro)
+			--INSERTA MOVIMIENTOS EN LA CUENTA OBJETIVO SI ES EL DIA DE AHORRO O ES EL ULTIMO DIA DEL MES Y EL DIA DE AHORRO ES MAYOR.
+			IF(@DiaFechaOperacion = @DiaAhorro OR (@DiaFechaOperacion = EOMONTH(@fechaOperacion) AND @DiaAhorro > @DiaFechaOperacion))
 				BEGIN
 					EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 							@CuentaAhorra, 
