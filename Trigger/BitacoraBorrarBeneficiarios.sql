@@ -14,7 +14,7 @@ BEGIN
 	IF (ROWCOUNT_BIG() = 0) --Evita que el trigger se inicie si no se hizo ningun cambio.
 		RETURN;
 	SET NOCOUNT ON;
-	IF UPDATE(Estado)
+	IF UPDATE(Activo)
 		BEGIN 
 		--Se declaran variables
 		DECLARE @idTipoEvento INT = 3,
@@ -44,7 +44,7 @@ BEGIN
 				)
 
 		SET @Fecha = (
-				SELECT TOP (1) *
+				SELECT TOP (1) Fecha
 				FROM [dbo].[FechaOperacion]
 				ORDER BY id DESC
 				)			

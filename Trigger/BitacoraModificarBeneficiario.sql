@@ -1,4 +1,4 @@
-USE [ProyectoBD1]
+	USE [ProyectoBD1]
 GO
 
 SET ANSI_NULLS ON
@@ -51,7 +51,7 @@ BEGIN
 			)
 
 	SET @Fecha = (
-			SELECT TOP (1) *
+			SELECT TOP (1) Fecha
 			FROM [dbo].[FechaOperacion]
 			ORDER BY id DESC
 			)	
@@ -71,7 +71,7 @@ BEGIN
 			@Fecha,
 			@XMLAntes,
 			@XMLDespues
-	FROM inserted B
+	FROM inserted 
 	
 
 
