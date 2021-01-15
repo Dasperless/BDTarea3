@@ -52,7 +52,7 @@ BEGIN
 				)
 
 		SET @Fecha = (
-				SELECT TOP (1) *
+				SELECT TOP (1) Fecha
 				FROM [dbo].[FechaOperacion]
 				ORDER BY id DESC
 				)	
