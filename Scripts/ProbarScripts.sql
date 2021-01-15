@@ -1,11 +1,9 @@
 DECLARE
- @outPersonaId INT
- , @OutResultCode INT
-EXEC dbo.SeleccionarPersona
-6,
-
-@outPersonaId OUTPUT,
+ @OutListadoBeneficiariosId INT
+ ,@OutResultCode INT
+EXEC [dbo].[Consulta3]
+@OutListadoBeneficiariosId OUTPUT,
 @OutResultCode OUTPUT
 
-SELECT @outPersonaId, @OutResultCode
+SELECT @OutListadoBeneficiariosId, @OutResultCode
 select * from errores 
