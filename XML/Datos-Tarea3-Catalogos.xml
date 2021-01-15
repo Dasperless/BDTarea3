@@ -43,8 +43,10 @@
     </TipoMovimientos>
     <TiposMovimientoCuentaAhorro>
         <Tipo_Movimiento Id="1" Nombre="Deposito por ahorro" />
-        <Tipo_Movimiento Id="2" Nombre="Deposito por redencion de intereses" />
+        <Tipo_Movimiento Id="2" Nombre="Debito por redencion de intereses" />
         <Tipo_Movimiento Id="3" Nombre="Redencion de la CO" />
+        <Tipo_Movimiento Id="4" Nombre="Credito por redencion de intereses" />
+        <Tipo_Movimiento Id="5" Nombre="Credito por Intereses Ganados" />
     </TiposMovimientoCuentaAhorro>
     <TiposEvento>
         <TipoEvento Id="1" Nombre="Insertar Beneficiarios" />
