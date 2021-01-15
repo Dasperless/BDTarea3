@@ -3,7 +3,7 @@
 	-- Nota: cambiar el path del from C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
@@ -376,7 +376,7 @@ BEGIN
 		SELECT @inIdCuentaObjetivoInt = IdCuentaObjetivo
 			,@inIdTipoMovObjInt = 2
 			,@inFechaInt = @fechaOperacion
-			,@inMontoInt = Saldo
+			,@inMontoInt = 0
 			,@inNuevoIntAcumuladoInt = InteresesAcumulados
 		FROM @TablaCuentaObjetivo
 		WHERE Sec = @lo2
@@ -444,10 +444,9 @@ END;
 --ON M.IdCuentaObjetivo = CO.id
 --SELECT * FROM EstadoCuenta
 --SELECT * FROM MovimientoCuentaAhorro 
---SELECT * FROM MovCuentaObjIntereses
-SELECT * FROM FechaOperacion
---Select * 
---FROM MovimientoCuentaAhorro MC 
+SELECT * FROM MovCuentaObjIntereses
+--SELECT * FROM FechaOperacion
+--SELECT * FROM MovimientoCuentaAhorro MC 
 --INNER JOIN [dbo].[TipoMovimientoCuentaAhorro] TM
 --		ON TM.id =  MC.TipoMovimientoCuentaAhorroid
 --Where MC.CuentaAhorroid = 9203 And Tm.id = 3
@@ -464,6 +463,7 @@ SELECT * FROM FechaOperacion
 --DELETE Persona
 --DELETE Beneficiarios
 --DELETE FechaOperacion
+--DELETE MovCuentaObjIntereses
 
 --SELECT * FROM [dbo].[Errores]
 --SELECT * FROM TMovCuentaObj

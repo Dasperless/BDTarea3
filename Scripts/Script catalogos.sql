@@ -140,3 +140,4 @@ SELECT * FROM TiposEvento
 --DELETE TipoMovimientoCuentaAhorro
 --DELETE TMovCuentaObj
 --DELETE TiposEvento
+--DELETE TMovCuentaObjIntereses
