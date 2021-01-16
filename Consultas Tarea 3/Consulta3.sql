@@ -111,8 +111,8 @@ BEGIN
 
 			SET @lo = @lo + 1
 		END;
-
 		SELECT @lo = MIN(id)
+		,@hi = MAX(id)
 		FROM dbo.Beneficiarios
 
 		WHILE @lo <= @hi
@@ -125,7 +125,7 @@ BEGIN
 						) = 1
 					) --Validacion: Revisa que el beneficiario no este eliminado 
 			BEGIN
-				SET @inCreditoTotalRecibido = (
+				SET @inCreditoTotalRecibido = ( -- Suma de todos los creditos que recibio el beneficiario 
 						SELECT SUM(CreditoRecibido)
 						FROM @listadoBeneficiarios
 						WHERE ValorDocIdentidad = (
@@ -133,12 +133,12 @@ BEGIN
 								FROM @listadoBeneficiarios
 								WHERE BeneficiarioId = @lo
 								)
-						)
-				SET @inMayorAporte = (
+						)	
+				SET @inMayorAporte = ( --Numero de cuenta que genero mayor credito para el beneficiario 
 						SELECT NumeroCuenta
 						FROM dbo.Beneficiarios
 						WHERE id = (
-								SELECT BeneficiarioId
+								SELECT TOP 1 BeneficiarioId
 								FROM @listadoBeneficiarios
 								WHERE CreditoRecibido = (
 										SELECT TOP 1 MAX(CreditoRecibido)
@@ -151,7 +151,7 @@ BEGIN
 										)
 								)
 						)
-				SET @inCantidadDeAportes = (
+				SET @inCantidadDeAportes = ( --Cantidad de cuentas a las cuales está asociado el beneficiario
 						SELECT COUNT(ValorDocIdentidad)
 						FROM @listadoBeneficiarios
 						WHERE ValorDocIdentidad = (
@@ -161,7 +161,7 @@ BEGIN
 								)
 						)
 
-				UPDATE @listadoBeneficiarios
+				UPDATE @listadoBeneficiarios --Actualiza tabla con los datos obtenidos arriba 
 				SET CreditoTotalRecibido = @inCreditoTotalRecibido
 					,MayorAporte = @inMayorAporte
 					,CantidadDeAportes = @inCantidadDeAportes
@@ -170,7 +170,23 @@ BEGIN
 
 			SET @lo = @lo + 1
 		END;
-		SELECT * FROM @listadoBeneficiarios
+
+		--SELECT * FROM @listadoBeneficiarios ORDER BY CreditoTotalRecibido DESC; --CREDITO POR CUENTA DE AHORRO
+		DELETE @listadoBeneficiarios  --Elimina repetidos 
+		WHERE id IN (
+				SELECT A.id
+				FROM @listadoBeneficiarios A
+				INNER JOIN @listadoBeneficiarios B ON A.ValorDocIdentidad = B.ValorDocIdentidad
+					AND A.id > B.id
+				)
+
+		SELECT ValorDocIdentidad  --Ordena de forma descendente 
+			,CreditoTotalRecibido
+			,MayorAporte
+			,CantidadDeAportes
+		FROM @listadoBeneficiarios
+		ORDER BY CreditoTotalRecibido DESC
+
 		SET @OutListadoBeneficiariosId = SCOPE_IDENTITY();
 		SET @OutResultCode = 0;
 
