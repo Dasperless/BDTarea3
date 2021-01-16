@@ -16,13 +16,15 @@ BEGIN
 	--Se declaran variables
 	DECLARE @MontoTotalIntereses MONEY,
 			@MontoTotalCuentaObjetivo MONEY,
-			@inIdTipoMovimientoCO INT
+			@inIdTipoMovimientoCO INT,
+			@inNuevoIntAcumuladoInt MONEY,
+			@inIdTipoMovObjInt INT
 
 	DECLARE	@OutMovimientoCuentaObjId INT, 
 			@OutNuevoSaldo INT
 
 
-	--Se les asignan valores
+	--SE LES ASIGNAN VALORES
 	SELECT @MontoTotalIntereses = SUM(Monto)
 	FROM [dbo].[MovCuentaObj]
 	WHERE IdCuentaObjetivo = @inIdCuentaObjetivo
@@ -31,14 +33,17 @@ BEGIN
 	FROM [dbo].[CuentaObjetivo]
 	WHERE id = @inIdCuentaObjetivo
 
-	--Verifica si no existe la cuenta objetivo
+	SET @inNuevoIntAcumuladoInt = 0
+	SET @inIdTipoMovObjInt = 2 -- DEBITO POR REDENCION DE INTERESES
+
+	--VERIFICA SI NO EXISTE LA CUENTA OBJETIVO
 	IF NOT EXISTS (
 		SELECT 1
 		FROM [dbo].[CuentaObjetivo]
 		WHERE id = @inIdCuentaObjetivo
 		)
 		BEGIN
-			SET @OutResultCode = 50017 --Codigo de retorno si la cuenta no existe.
+			SET @OutResultCode = 50017 --CODIGO DE RETORNO SI LA CUENTA NO EXISTE.
 			RETURN
 		END;
 
@@ -47,21 +52,30 @@ BEGIN
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 
 		BEGIN TRANSACTION TSaveRedCuentaObj
+		--SE RETIRAN LOS INTERESES
+		EXEC [dbo].[InsertarMovimientoCOIntereses]
+			@inIdCuentaObjetivo, 
+			@inIdTipoMovObjInt,
+			@inFecha,
+			@MontoTotalIntereses, 
+			@inNuevoIntAcumuladoInt, 
+			@OutMovimientoCuentaObjId OUTPUT, 
+			@OutResultCode OUTPUT
 
-		--Se depositan los intereses en la CO
+		--SE DEPOSITAN LOS INTERESES EN LA CO
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
-			2,									--Deposito por redencion de intereses
+			2,									--DEPOSITO POR REDENCION DE INTERESES
 			@inFecha, 
 			@MontoTotalIntereses, 
 			@OutMovimientoCuentaObjId OUTPUT, 
 			@OutNuevoSaldo OUTPUT, 
 			@OutResultCode OUTPUT
 
-		--Se depositan el saldo de la CO en la Cuenta
+		--SE DEPOSITAN EL SALDO DE LA CO EN LA CUENTA
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
-			3,									--Redencion de la CO"
+			3,									--REDENCION DE LA CO
 			@inFecha, 
 			@MontoTotalCuentaObjetivo, 
 			@OutMovimientoCuentaObjId OUTPUT, 
