@@ -1,9 +1,10 @@
 	USE ProyectoBD1
 	DECLARE @xmlData XML
-	-- Nota: cambiar el path del from C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
+	--Path Jacob: C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml
+	--Path Dario: C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
@@ -412,7 +413,7 @@ BEGIN
 
 			SET @DiaFechaOperacion = DATEPART(DAY, @fechaOperacion)
 
-			IF(@fechaOperacion = @FechaFinalCO)
+			IF(@fechaOperacion = @FechaFinalCO) --SI LA FECHA DE OPERACION ES IGUAL A LA FECHA FINAL DE LA CO SE REDIME.
 				BEGIN
 					EXEC [dbo].[RedimirCuentaObjetivo] 
 						@CuentaAhorra,
@@ -422,7 +423,7 @@ BEGIN
 				END;
 
 			--INSERTA MOVIMIENTOS EN LA CUENTA OBJETIVO SI ES EL DIA DE AHORRO O ES EL ULTIMO DIA DEL MES Y EL DIA DE AHORRO ES MAYOR.
-			IF(@DiaFechaOperacion = @DiaAhorro OR (@DiaFechaOperacion = EOMONTH(@fechaOperacion) AND @DiaAhorro > @DiaFechaOperacion))
+			IF(@DiaFechaOperacion = @DiaAhorro OR (@fechaOperacion = EOMONTH(@fechaOperacion) AND @DiaAhorro > @DiaFechaOperacion))
 				BEGIN
 					EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 							@CuentaAhorra, 
@@ -443,19 +444,18 @@ END;
 --SELECT * FROM UsuarioPuedeVer
 --SELECT * FROM Persona
 --SELECT * FROM Beneficiarios
---SELECT * FROM CuentaAhorro 
---SELECT * FROM CuentaObjetivo CO
---INNER JOIN MovCuentaObj M 
---ON M.IdCuentaObjetivo = CO.id
+SELECT * FROM CuentaAhorro CA
+Join [dbo].[MovimientoCuentaAhorro] MCA
+ON MCA.CuentaAhorroid = Ca.id
+WHERE CA.NumeroCuenta = 86073678 
+
+SELECT * FROM CuentaObjetivo CO
+JOIN MovCuentaObj M 
+ON M.IdCuentaObjetivo = CO.id
 --SELECT * FROM EstadoCuenta
 --SELECT * FROM MovimientoCuentaAhorro 
-SELECT * FROM MovCuentaObjIntereses
+--SELECT * FROM MovCuentaObjIntereses
 --SELECT * FROM FechaOperacion
---SELECT * FROM MovimientoCuentaAhorro MC 
---INNER JOIN [dbo].[TipoMovimientoCuentaAhorro] TM
---		ON TM.id =  MC.TipoMovimientoCuentaAhorroid
---Where MC.CuentaAhorroid = 9203 And Tm.id = 3
-		
 
 --DELETE Eventos
 --DELETE Usuario

@@ -13,7 +13,8 @@ CREATE OR ALTER PROCEDURE [dbo].[RedimirCuentaObjetivo]
 AS
 BEGIN
 	SET NOCOUNT ON;
-	--Se declaran variables
+
+	--SE DECLARAN VARIABLES
 	DECLARE @MontoTotalIntereses MONEY,
 			@MontoTotalCuentaObjetivo MONEY,
 			@inIdTipoMovimientoCO INT,
@@ -26,7 +27,7 @@ BEGIN
 
 	--SE LES ASIGNAN VALORES
 	SELECT @MontoTotalIntereses = SUM(Monto)
-	FROM [dbo].[MovCuentaObj]
+	FROM [dbo].[MovCuentaObjIntereses]
 	WHERE IdCuentaObjetivo = @inIdCuentaObjetivo
 
 	SELECT @MontoTotalCuentaObjetivo = Saldo + @MontoTotalIntereses
@@ -52,6 +53,7 @@ BEGIN
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 
 		BEGIN TRANSACTION TSaveRedCuentaObj
+
 		--SE RETIRAN LOS INTERESES
 		EXEC [dbo].[InsertarMovimientoCOIntereses]
 			@inIdCuentaObjetivo, 
@@ -72,7 +74,7 @@ BEGIN
 			@OutNuevoSaldo OUTPUT, 
 			@OutResultCode OUTPUT
 
-		--SE DEPOSITAN EL SALDO DE LA CO EN LA CUENTA
+		--SE RETIRA EL SALDO DE LA CO 
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
 			3,									--REDENCION DE LA CO
