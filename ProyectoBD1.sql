@@ -1,12 +1,12 @@
 USE [master]
 GO
-/****** Object:  Database [ProyectoBD1]    Script Date: 1/14/2021 11:53:11 AM ******/
+/****** Object:  Database [ProyectoBD1]    Script Date: 1/17/2021 4:38:34 PM ******/
 CREATE DATABASE [ProyectoBD1]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'ProyectoBD1', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ProyectoBD1.mdf' , SIZE = 73728KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'ProyectoBD1', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ProyectoBD1.mdf' , SIZE = 73728KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'ProyectoBD1_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ProyectoBD1_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'ProyectoBD1_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ProyectoBD1_log.ldf' , SIZE = 204800KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [ProyectoBD1] SET COMPATIBILITY_LEVEL = 150
@@ -80,7 +80,7 @@ ALTER DATABASE [ProyectoBD1] SET QUERY_STORE = OFF
 GO
 USE [ProyectoBD1]
 GO
-/****** Object:  UserDefinedFunction [dbo].[CalcularInteres]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  UserDefinedFunction [dbo].[CalcularInteres]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,7 +100,7 @@ GO
     RETURN @Resultado; 
   END 
 GO
-/****** Object:  Table [dbo].[Beneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Beneficiarios]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ CREATE TABLE [dbo].[Beneficiarios](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[CuentaAhorro]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -139,7 +139,7 @@ CREATE TABLE [dbo].[CuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[CuentaObjetivo]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -156,14 +156,14 @@ CREATE TABLE [dbo].[CuentaObjetivo](
 	[InteresesAcumulados] [money] NOT NULL,
 	[NumeroCuentaPrimaria] [int] NOT NULL,
 	[NumeroCuentaObjetivo] [int] NOT NULL,
-	[Estado] [bit] NULL,
+	[Estado] [bit] NOT NULL,
  CONSTRAINT [PK_CuentaObjetivo] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DiaMesDeposito]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[DiaMesDeposito]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -178,7 +178,7 @@ CREATE TABLE [dbo].[DiaMesDeposito](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Errores]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Errores]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,7 +194,7 @@ CREATE TABLE [dbo].[Errores](
 	[GETDATE] [datetime] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[EstadoCuenta]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -216,7 +216,7 @@ CREATE TABLE [dbo].[EstadoCuenta](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Eventos]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Eventos]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -235,7 +235,7 @@ CREATE TABLE [dbo].[Eventos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FechaOperacion]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[FechaOperacion]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -249,7 +249,7 @@ CREATE TABLE [dbo].[FechaOperacion](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[MovCuentaObj]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -267,7 +267,7 @@ CREATE TABLE [dbo].[MovCuentaObj](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovCuentaObjIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[MovCuentaObjIntereses]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -285,7 +285,7 @@ CREATE TABLE [dbo].[MovCuentaObjIntereses](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[MovimientoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[MovimientoCuentaAhorro]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -305,7 +305,7 @@ CREATE TABLE [dbo].[MovimientoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Parentezco]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Parentezco]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -319,7 +319,7 @@ CREATE TABLE [dbo].[Parentezco](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Persona]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Persona]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -340,7 +340,7 @@ CREATE TABLE [dbo].[Persona](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TipoCuentaAhorro]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -363,7 +363,7 @@ CREATE TABLE [dbo].[TipoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoDocIdentidad]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TipoDocIdentidad]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -377,7 +377,7 @@ CREATE TABLE [dbo].[TipoDocIdentidad](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoMoneda]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TipoMoneda]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -392,7 +392,7 @@ CREATE TABLE [dbo].[TipoMoneda](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TipoMovimientoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TipoMovimientoCuentaAhorro]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -407,7 +407,7 @@ CREATE TABLE [dbo].[TipoMovimientoCuentaAhorro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TiposEvento]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TiposEvento]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -421,7 +421,7 @@ CREATE TABLE [dbo].[TiposEvento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TMovCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TMovCuentaObj]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -435,7 +435,7 @@ CREATE TABLE [dbo].[TMovCuentaObj](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TMovCuentaObjIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[TMovCuentaObjIntereses]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -449,7 +449,7 @@ CREATE TABLE [dbo].[TMovCuentaObjIntereses](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuario]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[Usuario]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -466,7 +466,7 @@ CREATE TABLE [dbo].[Usuario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UsuarioPuedeVer]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  Table [dbo].[UsuarioPuedeVer]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -565,6 +565,7 @@ ALTER TABLE [dbo].[MovCuentaObjIntereses] CHECK CONSTRAINT [FK_MovCuentaObjInter
 GO
 ALTER TABLE [dbo].[MovimientoCuentaAhorro]  WITH CHECK ADD  CONSTRAINT [FK_MovimientoCuentaAhorro_CuentaAhorro] FOREIGN KEY([CuentaAhorroid])
 REFERENCES [dbo].[CuentaAhorro] ([id])
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[MovimientoCuentaAhorro] CHECK CONSTRAINT [FK_MovimientoCuentaAhorro_CuentaAhorro]
 GO
@@ -610,7 +611,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[UsuarioPuedeVer] CHECK CONSTRAINT [FK_UsuarioPuedeVer_Usuario]
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarMovimientoEspecifico]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[BuscarMovimientoEspecifico]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -664,7 +665,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[CerrarEstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[CerrarEstadoCuenta]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -791,7 +792,221 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ConsultaEstadoCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[Consulta3]    Script Date: 1/17/2021 4:38:34 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE
+	
+
+ PROCEDURE [dbo].[Consulta3] -- Lista Beneficiarios si los ahorrantes Mueren   
+	@OutListadoBeneficiariosId INT OUTPUT
+	,@OutResultCode INT OUTPUT
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	--Se declaran variables
+	DECLARE @listadoBeneficiarios TABLE (
+		id INT IDENTITY(1, 1)
+		,BeneficiarioId INT
+		,ValorDocIdentidad INT
+		,CreditoRecibido MONEY
+		,CreditoTotalRecibido MONEY
+		,MayorAporte INT
+		,--Aqui nos referimos al numero de cuenta que aporto más dinero entre todos los ahorrantes
+		CantidadDeAportes INT
+		)
+	DECLARE @inBeneficiarioId INT
+		,@inValorDocIdentidad INT
+		,@inCreditoRecibido MONEY
+		,@inCreditoTotalRecibido MONEY
+		,@inMayorAporte INT
+		,@inCantidadDeAportes INT
+	DECLARE @lo INT
+		,@hi INT
+
+	SELECT @lo = MIN(id)
+		,@hi = MAX(id)
+	FROM dbo.Beneficiarios
+
+	--Validaciones
+	IF NOT EXISTS (
+			SELECT 1
+			FROM [dbo].[Beneficiarios]
+			)
+	BEGIN
+		SET @OutResultCode = 50017 --No hay beneficiarios 
+		RETURN
+	END;
+
+	BEGIN TRY
+		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+
+		BEGIN TRANSACTION transaccionListadoBeneficiario
+
+		WHILE @lo <= @hi
+		BEGIN
+			IF (
+					(
+						SELECT Activo
+						FROM dbo.Beneficiarios
+						WHERE id = @lo
+						) = 1
+					) --Validacion: Revisa que el beneficiario no este eliminado 
+			BEGIN
+				SET @inBeneficiarioId = @lo --id del beneficiario
+				SET @inValorDocIdentidad = (
+						SELECT ValorDocumentoIdentidadBeneficiario
+						FROM dbo.Beneficiarios
+						WHERE id = @lo
+						)
+				SET @inCreditoRecibido = (
+						(
+							SELECT Saldo
+							FROM dbo.CuentaAhorro
+							WHERE id = (
+									SELECT CuentaAhorroid
+									FROM dbo.Beneficiarios
+									WHERE id = @lo
+									)
+							) * (
+							SELECT Porcentaje
+							FROM dbo.Beneficiarios
+							WHERE id = @lo
+							)
+						) / 100
+				SET @inCreditoTotalRecibido = 0
+				SET @inMayorAporte = - 1
+				SET @inCantidadDeAportes = 0
+
+				INSERT INTO @listadoBeneficiarios (
+					BeneficiarioId
+					,ValorDocIdentidad
+					,CreditoRecibido
+					,CreditoTotalRecibido
+					,MayorAporte
+					,CantidadDeAportes
+					)
+				VALUES (
+					@inBeneficiarioId
+					,@inValorDocIdentidad
+					,@inCreditoRecibido
+					,@inCreditoTotalRecibido
+					,@inMayorAporte
+					,@inCantidadDeAportes
+					)
+			END;
+
+			SET @lo = @lo + 1
+		END;
+		SELECT @lo = MIN(id)
+		,@hi = MAX(id)
+		FROM dbo.Beneficiarios
+
+		WHILE @lo <= @hi
+		BEGIN
+			IF (
+					(
+						SELECT Activo
+						FROM dbo.Beneficiarios
+						WHERE id = @lo
+						) = 1
+					) --Validacion: Revisa que el beneficiario no este eliminado 
+			BEGIN
+				SET @inCreditoTotalRecibido = ( -- Suma de todos los creditos que recibio el beneficiario 
+						SELECT SUM(CreditoRecibido)
+						FROM @listadoBeneficiarios
+						WHERE ValorDocIdentidad = (
+								SELECT ValorDocIdentidad
+								FROM @listadoBeneficiarios
+								WHERE BeneficiarioId = @lo
+								)
+						)	
+				SET @inMayorAporte = ( --Numero de cuenta que genero mayor credito para el beneficiario 
+						SELECT NumeroCuenta
+						FROM dbo.Beneficiarios
+						WHERE id = (
+								SELECT TOP 1 BeneficiarioId
+								FROM @listadoBeneficiarios
+								WHERE CreditoRecibido = (
+										SELECT TOP 1 MAX(CreditoRecibido)
+										FROM @listadoBeneficiarios
+										WHERE ValorDocIdentidad = (
+												SELECT ValorDocIdentidad
+												FROM @listadoBeneficiarios
+												WHERE BeneficiarioId = @lo
+												)
+										)
+								)
+						)
+				SET @inCantidadDeAportes = ( --Cantidad de cuentas a las cuales está asociado el beneficiario
+						SELECT COUNT(ValorDocIdentidad)
+						FROM @listadoBeneficiarios
+						WHERE ValorDocIdentidad = (
+								SELECT ValorDocIdentidad
+								FROM @listadoBeneficiarios
+								WHERE BeneficiarioId = @lo
+								)
+						)
+
+				UPDATE @listadoBeneficiarios --Actualiza tabla con los datos obtenidos arriba 
+				SET CreditoTotalRecibido = @inCreditoTotalRecibido
+					,MayorAporte = @inMayorAporte
+					,CantidadDeAportes = @inCantidadDeAportes
+				WHERE BeneficiarioId = @lo
+			END;
+
+			SET @lo = @lo + 1
+		END;
+
+		--SELECT * FROM @listadoBeneficiarios ORDER BY CreditoTotalRecibido DESC; --CREDITO POR CUENTA DE AHORRO
+		DELETE @listadoBeneficiarios  --Elimina repetidos 
+		WHERE id IN (
+				SELECT A.id
+				FROM @listadoBeneficiarios A
+				INNER JOIN @listadoBeneficiarios B ON A.ValorDocIdentidad = B.ValorDocIdentidad
+					AND A.id > B.id
+				)
+
+		SELECT ValorDocIdentidad  --Ordena de forma descendente 
+			,CreditoTotalRecibido
+			,MayorAporte
+			,CantidadDeAportes
+		FROM @listadoBeneficiarios
+		ORDER BY CreditoTotalRecibido DESC
+
+		SET @OutListadoBeneficiariosId = SCOPE_IDENTITY();
+		SET @OutResultCode = 0;
+
+		COMMIT TRANSACTION transaccionListadoBeneficiario;--Finaliza la transacción
+	END TRY
+
+	BEGIN CATCH
+		IF @@TRANCOUNT > 0
+			ROLLBACK TRANSACTION transaccionListadoBeneficiario;
+
+		INSERT INTO dbo.Errores --Tabla de Errores
+		VALUES (
+			SUSER_SNAME()
+			,ERROR_NUMBER()
+			,ERROR_STATE()
+			,ERROR_SEVERITY()
+			,ERROR_LINE()
+			,ERROR_PROCEDURE()
+			,ERROR_MESSAGE()
+			,GETDATE()
+			);
+
+		SET @OutResultCode = 50005;
+	END CATCH
+
+	SET NOCOUNT OFF
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[ConsultaEstadoCuenta]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -814,7 +1029,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[CrearCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[CrearCuentaObjetivo]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -872,7 +1087,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[DesactivacionCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[DesactivacionCuentaObjetivo]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -923,7 +1138,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EditarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[EditarBeneficiario]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -988,7 +1203,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[EliminarRecords]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[EliminarRecords]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1020,7 +1235,7 @@ BEGIN
 	SET NOCOUNT OFF;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarBeneficiarios]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1128,7 +1343,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarCuentaAhorro]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1209,7 +1424,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarEstadosCuenta]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarEstadosCuenta]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1288,41 +1503,42 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCOIntereses]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCOIntereses]    Script Date: 1/17/2021 4:38:34 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE     PROCEDURE [dbo].[InsertarMovimientoCOIntereses] 
-	@inIdCuentaObjetivoIntereses INT,
-	@inIdTipoMovimientoCOIntereses INT,
-	@inFecha DATE,
-	@inMonto MONEY,
+CREATE PROCEDURE [dbo].[InsertarMovimientoCOIntereses] 
+	@inIdCuentaObjetivoInt INT,
+	@inIdTipoMovObjInt INT,
+	@inFechaInt DATE,
+	@inMontoInt MONEY,
+	@inNuevoIntAcumuladoInt MONEY,
 	@OutMovimientoCOInteresesId INT OUTPUT,
-	@OutNuevoSaldoCOIntereses INT OUTPUT,
 	@OutResultCode INT OUTPUT
 AS
 BEGIN
 	SET NOCOUNT ON;
 	--Se declaran variables
-	DECLARE @NuevoSaldoCuentaObjetivoIntereses MONEY  = 0 --[NOTA] : Provicional por divergencia.
-
+	DECLARE 
+			 @Fecha1 DATE
+			,@Fecha2 DATE  
+			,@Meses int = 0 
 	--Verifica si no existe la cuenta objetivo
 	IF NOT EXISTS (
 		SELECT 1
 		FROM [dbo].[CuentaObjetivo]
-		WHERE id = @inIdCuentaObjetivoIntereses
+		WHERE id = @inIdCuentaObjetivoInt
 		)
 		BEGIN
 			SET @OutResultCode = 50017 --Codigo de retorno si la cuenta no existe.
 			RETURN
 		END;
-
 	--Verifica si no existe el tipo de movimiento.
 	IF NOT EXISTS(
 			SELECT 1
 			FROM [dbo].[TMovCuentaObjIntereses]
-			WHERE id = @inIdTipoMovimientoCOIntereses
+			WHERE id = @inIdTipoMovObjInt 
 		)
 		BEGIN
 			SET @OutResultCode = 50018 --Codigo de retorno si el tipo de movimiento no existe
@@ -1330,26 +1546,53 @@ BEGIN
 		END;
 
 	BEGIN TRY
-
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
 
 		BEGIN TRANSACTION TSaveMovCuentaObj
 
+		SET @Fecha1 = (
+				SELECT FechaInicio
+				FROM [dbo].CuentaObjetivo
+				WHERE [dbo].CuentaObjetivo.id = @inIdCuentaObjetivoInt
+				)
+		SET @Fecha2 = (
+				SELECT FechaFin
+				FROM [dbo].CuentaObjetivo
+				WHERE [dbo].CuentaObjetivo.id = @inIdCuentaObjetivoInt
+				)
+		SET @Meses = DATEDIFF(MONTH, @Fecha1, @Fecha2)
+		SET @inMontoInt = (
+				(
+					(
+						SELECT Saldo
+						FROM [dbo].CuentaObjetivo
+						WHERE id = @inIdCuentaObjetivoInt
+						) * 0.5 * @Meses
+					) / 100
+				) / 365
+		SET @inNuevoIntAcumuladoInt = @inMontoInt + (
+				SELECT InteresesAcumulados
+				FROM [dbo].CuentaObjetivo
+				WHERE id = @inIdCuentaObjetivoInt
+				)
+		UPDATE [dbo].CuentaObjetivo
+		SET InteresesAcumulados = @inNuevoIntAcumuladoInt
+		WHERE id = @inIdCuentaObjetivoInt
+
 		INSERT INTO [dbo].[MovCuentaObjIntereses] (
-			IdCuentaObjetivo,
-			IdTipoMovObj,
-			Fecha,
-			Monto,
-			NuevoIntAcumulado
+			IdCuentaObjetivo
+			,IdTipoMovObj
+			,Fecha
+			,Monto
+			,NuevoIntAcumulado
 			)
-		SELECT @inIdCuentaObjetivoIntereses,
-			@inIdTipoMovimientoCOIntereses,
-			@inFecha,
-			@inMonto,
-			@NuevoSaldoCuentaObjetivoIntereses
+		SELECT @inIdCuentaObjetivoInt
+			,@inIdTipoMovObjInt
+			,@inFechaInt
+			,@inMontoInt
+			,@inNuevoIntAcumuladoInt
 
 		SET @OutMovimientoCOInteresesId = SCOPE_IDENTITY();
-		SET @OutNuevoSaldoCOIntereses = @NuevoSaldoCuentaObjetivoIntereses;
 		SET @OutResultCode = 0;
 
 		COMMIT TRANSACTION TSaveMovCuentaObj;
@@ -1376,13 +1619,15 @@ BEGIN
 
 	SET NOCOUNT OFF
 END;
+
+
+-- calcular interes diario 
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientoCuentaObjetivo]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE   PROCEDURE [dbo].[InsertarMovimientoCuentaObjetivo] 
 	@inIdCuentaObjetivo INT,
 	@inIdTipoMovimientoCO INT,
@@ -1394,48 +1639,71 @@ CREATE   PROCEDURE [dbo].[InsertarMovimientoCuentaObjetivo]
 AS
 BEGIN
 	SET NOCOUNT ON;
-	--Se declaran variables
+	--SE DECLARAN VARIABLES
 	DECLARE @SaldoActualCuentaObjetivo MONEY,
 			@NuevoSaldoCuentaObjetivo MONEY,
 			@SaldoCuenta MONEY,
-			@IdCuenta INT
+			@IdCuenta INT,
+			@IdTipoMovimiento INT
 
-	--Se les asignan valores
+	DECLARE @TipoMovimientoId INT,
+			@Descripcion VARCHAR(50),
+			@OutMovimientoIdIM INT, 
+			@OutResultCodeIM INT, 
+			@OutNuevoSaldoIM INT
+
+
+	--SE LES ASIGNAN VALORES
 	SELECT @SaldoActualCuentaObjetivo = CO.Saldo,
 		@IdCuenta = C.id,
 		@SaldoCuenta = C.Saldo
 	FROM [dbo].[CuentaObjetivo] CO
 	INNER JOIN [dbo].[CuentaAhorro] C
-	ON C.NumeroCuenta = Co.NumeroCuentaPrimaria
+		ON C.NumeroCuenta = Co.NumeroCuentaPrimaria
 	WHERE CO.id = @inIdCuentaObjetivo
 
-	SELECT @NuevoSaldoCuentaObjetivo = (	CASE 
-											WHEN @inIdTipoMovimientoCO = 1 OR @inIdTipoMovimientoCO = 2
-											THEN @SaldoActualCuentaObjetivo + @inMonto
-											ELSE @SaldoActualCuentaObjetivo - @inMonto
-											END
-										)
+	SELECT @NuevoSaldoCuentaObjetivo = (
+			CASE 
+				WHEN @inIdTipoMovimientoCO = 1		--DEPOSITO POR AHORRO (CO)
+					OR @inIdTipoMovimientoCO = 2	--DEPOSITO POR REDENCION DE INTERESES
+					THEN @SaldoActualCuentaObjetivo + @inMonto	--Aumento el saldo de la cuenta objetivo
+				ELSE @SaldoActualCuentaObjetivo - @inMonto --De lo contrario disminuyo el saldo de la cuenta objetivo
+				END
+			)
 
-	--Verifica si no existe la cuenta objetivo
+	SELECT @TipoMovimientoId = (
+			CASE 
+				WHEN @inIdTipoMovimientoCO = 1 --DEPOSITO POR AHORRO (CO)
+					THEN 10	--Retiro por ahorro en cuenta objetivo
+				WHEN @inIdTipoMovimientoCO = 3 --REDENCION DE LA CO
+					THEN 11 --Deposito por ahorro en cuenta objetivo
+				END
+			)
+
+	SELECT @Descripcion =  Nombre
+	FROM [dbo].[TipoMovimientoCuentaAhorro]
+	WHERE id  = @TipoMovimientoId
+
+	--VERIFICA SI NO EXISTE LA CUENTA OBJETIVO
 	IF NOT EXISTS (
 		SELECT 1
 		FROM [dbo].[CuentaObjetivo]
 		WHERE id = @inIdCuentaObjetivo
 		)
 		BEGIN
-			SET @OutResultCode = 50017 --Codigo de retorno si la cuenta no existe.
-
+			SET @OutResultCode = 50017 --CODIGO DE RETORNO SI LA CUENTA NO EXISTE.
 			RETURN
 		END;
 
-	--Verifica si no existe el tipo de movimiento.
+	--VERIFICA SI NO EXISTE EL TIPO DE MOVIMIENTO.
 	IF NOT EXISTS(
 			SELECT 1
-			FROM [dbo].[TMovCuentaObjIntereses]
+			FROM [dbo].[TMovCuentaObj]
 			WHERE id = @inIdTipoMovimientoCO
 		)
 		BEGIN
-			SET @OutResultCode = 50018 --Codigo de retorno si el tipo de movimiento no existe
+			SET @OutResultCode = 50018 --CODIGO DE RETORNO SI EL TIPO DE MOVIMIENTO NO EXISTE
+			RETURN;
 		END;
 
 	BEGIN TRY
@@ -1444,33 +1712,40 @@ BEGIN
 
 		BEGIN TRANSACTION TSaveMovCuentaObj
 
-		INSERT INTO [dbo].[MovCuentaObj](
-				IdCuentaObjetivo, 
-				IdTipoMovObj, 
-				Fecha, 
-				Monto, 
+		--REALIZA EL MOVIMIENTO EN LA CUENTA PRINCIPAL (CREDITO O DEBITO)
+		EXEC [dbo].[InsertarMovimientos]
+			@IdCuenta, 
+			@TipoMovimientoId, 
+			@inMonto, 
+			@inFecha, 
+			@Descripcion,
+			@OutMovimientoIdIM OUTPUT, 
+			@OutResultCodeIM OUTPUT, 
+			@OutNuevoSaldoIM OUTPUT
+
+		--EVITA QUE SE INSERTEN MOVIMIENTOS EN LA CO SI EL SALDO DE LA CUENTA PRINCIPAL ES NEGATIVO.
+		IF ((@inIdTipoMovimientoCO = 1 AND @SaldoCuenta - @inMonto >= 0) OR @inIdTipoMovimientoCO != 1)
+			BEGIN
+			INSERT INTO [dbo].[MovCuentaObj] (
+				IdCuentaObjetivo,
+				IdTipoMovObj,
+				Fecha,
+				Monto,
 				NuevoSaldo
 				)
-		SELECT @inIdCuentaObjetivo,
-			@inIdTipoMovimientoCO,
-			@inFecha,
-			@inMonto,
-			@NuevoSaldoCuentaObjetivo
-		
-		--Actualiza el saldo en la cuenta.
-		UPDATE [dbo].[CuentaAhorro]
-		SET Saldo = (	CASE 
-						WHEN @inIdTipoMovimientoCO = 1 OR @inIdTipoMovimientoCO = 2
-						THEN @SaldoCuenta - @inMonto
-						ELSE @SaldoCuenta + @inMonto
-						END
-					)
-		WHERE id = @IdCuenta
+			SELECT @inIdCuentaObjetivo,
+				@inIdTipoMovimientoCO,
+				@inFecha,
+				@inMonto,
+				@NuevoSaldoCuentaObjetivo
+			
 
-		--Actualiza el saldo de la cuenta objetivo.
-		UPDATE [dbo].[CuentaObjetivo]
-		SET Saldo = @NuevoSaldoCuentaObjetivo
-		WHERE id = @inIdCuentaObjetivo
+			--ACTUALIZA EL SALDO DE LA CUENTA OBJETIVO.
+			UPDATE [dbo].[CuentaObjetivo]
+			SET Saldo = @NuevoSaldoCuentaObjetivo
+			WHERE id = @inIdCuentaObjetivo
+
+			END;
 
 		SET @OutMovimientoCuentaObjId = SCOPE_IDENTITY();
 		SET @OutNuevoSaldo = @NuevoSaldoCuentaObjetivo;
@@ -1501,7 +1776,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarMovimientos]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1524,7 +1799,7 @@ BEGIN
 	SET NOCOUNT ON;
 
 	BEGIN TRY
-		-- se declaran variables
+		-- SE DECLARAN VARIABLES
 		DECLARE @nuevoSaldo MONEY			--Nuevo saldo.
 		DECLARE @EstadoDeCuentaID INT		--Estado de cuenta.
 		DECLARE @TipoMovimiento VARCHAR(20)	--Tipo de movimiento
@@ -1536,16 +1811,16 @@ BEGIN
 				@NumRetirosCHEC INT,		--Contador de retiros cajero humano (Estado Cuenta)
 				@NumRetirosCAEC INT			--Contador de retiros cajero automatico (Estado Cuenta)
 
-		--Output SP multas por CA y CH 
+		--OUTPUT SP MULTAS POR CA Y CH 
 		DECLARE @OutMovimientoIdMov INT,
 				@OutResultCodeMov INT,
 				@OutNuevoSaldoMov INT
 
 
-		-- se inicializan variables		
+		--SE INICIALIZAN VARIABLES		
 		SET @OutResultCode = 0	--Codigo de retorno.
 
-		--Obtiene el id del estado de cuenta
+		--OBTIENE EL ID DEL ESTADO DE CUENTA
 		SELECT	@EstadoDeCuentaID = EC.id,
 				@NumRetirosCAEC = EC.RetirosCA,
 				@NumRetirosCHEC = EC.RetirosCH
@@ -1554,7 +1829,7 @@ BEGIN
 		WHERE @inFecha BETWEEN EC.FechaInicio
 				AND EC.FechaFin
 
-		--Numero de retiros y comisiones de cajero automatico y cajero humano.
+		--NUMERO DE RETIROS Y COMISIONES DE CAJERO AUTOMATICO Y CAJERO HUMANO.
 		SELECT	@ComisionCA = TC.ComisionAutomatico,
 				@ComisionCH = TC.ComisionHumano,
 				@NumRetirosCH = TC.NumRetirosHumano,
@@ -1564,12 +1839,12 @@ BEGIN
 		WHERE C.id = @inCuentaId
 
 	
-		--Se obtiene el nombre del tipo de movimiento
+		--SE OBTIENE EL NOMBRE DEL TIPO DE MOVIMIENTO
 		SELECT	@TipoMovimiento = TipoOperacion
 		FROM TipoMovimientoCuentaAhorro TM
 		WHERE TM.id = @inTipoMovimientoId
 
-		-- Verifica si la cuenta existe.
+		-- VERIFICA SI LA CUENTA EXISTE.
 		IF NOT EXISTS (
 				SELECT 1
 				FROM dbo.CuentaAhorro C
@@ -1581,7 +1856,7 @@ BEGIN
 			RETURN
 		END;
 
-		-- Verifica si no existe el tipo de movimiento.
+		-- VERIFICA SI NO EXISTE EL TIPO DE MOVIMIENTO.
 		IF NOT EXISTS (
 				SELECT 1
 				FROM dbo.TipoMovimientoCuentaAhorro M
@@ -1593,7 +1868,7 @@ BEGIN
 			RETURN
 		END;
 
-		--Calcula el nuevo saldo 
+		--CALCULA EL NUEVO SALDO DEPENDIENDO DEL TIPO DE MOVIMIENTO.
 		SELECT @nuevoSaldo = (
 				CASE 
 					WHEN @TipoMovimiento = 'Credito'
@@ -1604,7 +1879,7 @@ BEGIN
 		FROM dbo.CuentaAhorro CA
 		WHERE CA.Id = @inCuentaId;
 
-		--Verifica si hay un retiro por cajero automatico y verifica si se aplica multa
+		--VERIFICA SI HAY UN RETIRO POR CAJERO AUTOMATICO Y VERIFICA SI SE APLICA MULTA
 		IF(@inTipoMovimientoId = 2)
 			BEGIN
 				SET @NumRetirosCAEC = @NumRetirosCAEC + 1
@@ -1613,7 +1888,7 @@ BEGIN
 				SET RetirosCA = @NumRetirosCAEC
 				WHERE id =  @EstadoDeCuentaID	
 
-				--Se aplica la multa
+				--SE APLICA LA MULTA
 				IF(@NumRetirosCAEC >  @NumRetirosCA)
 					BEGIN
 						EXEC	[dbo].[InsertarMovimientos]
@@ -1628,7 +1903,7 @@ BEGIN
 					END				
 			END;
 
-		--Verifica si hay un retiro por cajero humano y verifica si se aplica multa
+		--VERIFICA SI HAY UN RETIRO POR CAJERO HUMANO Y VERIFICA SI SE APLICA MULTA
 		IF(@inTipoMovimientoId = 3)
 			BEGIN 
 				SET @NumRetirosCHEC = @NumRetirosCHEC + 1
@@ -1637,7 +1912,7 @@ BEGIN
 				SET RetirosCH = @NumRetirosCHEC
 				WHERE id =  @EstadoDeCuentaID
 
-				--Se aplica la multa
+				--SE APLICA LA MULTA
 				IF(@NumRetirosCHEC >  @NumRetirosCH)
 					BEGIN
 						EXEC	[dbo].[InsertarMovimientos]
@@ -1657,34 +1932,34 @@ BEGIN
 
 		BEGIN TRANSACTION TSaveMov
 
+			--SE INSERTA EL MOVIMIENTO EN LA CUENTA DE AHORRO.
+			INSERT INTO MovimientoCuentaAhorro (
+				Fecha,
+				Monto,
+				NuevoSaldo,
+				EstadoCuentaid,
+				TipoMovimientoCuentaAhorroid,
+				CuentaAhorroid,
+				Descripcion
+				)
+			VALUES (
+				@inFecha,
+				@inMonto,
+				@NuevoSaldo,
+				@EstadoDeCuentaID,
+				@inTipoMovimientoId,
+				@inCuentaId,
+				@inDescripcion
+				)
 
-		INSERT INTO MovimientoCuentaAhorro (
-			Fecha,
-			Monto,
-			NuevoSaldo,
-			EstadoCuentaid,
-			TipoMovimientoCuentaAhorroid,
-			CuentaAhorroid,
-			Descripcion
-			)
-		VALUES (
-			@inFecha,
-			@inMonto,
-			@NuevoSaldo,
-			@EstadoDeCuentaID,
-			@inTipoMovimientoId,
-			@inCuentaId,
-			@inDescripcion
-			)
 
+			--SE ACTUALIZA EL CREDITO EN LA CUENTA DE AHORRO
+			UPDATE dbo.CuentaAhorro
+			SET Saldo = @nuevoSaldo
+			WHERE Id = @inCuentaId
 
-		--Se actualiza el credito en la cuenta de ahorro
-		UPDATE dbo.CuentaAhorro
-		SET Saldo = @nuevoSaldo
-		WHERE Id = @inCuentaId
-
-		SET @outMovimientoId = SCOPE_IDENTITY();
-		SET @OutNuevoSaldo = @nuevoSaldo
+			SET @outMovimientoId = SCOPE_IDENTITY();
+			SET @OutNuevoSaldo = @nuevoSaldo
 
 		COMMIT TRANSACTION TSaveMov;
 	END TRY
@@ -1711,7 +1986,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarPersonas]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarPersonas]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1801,7 +2076,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarUsuarioJacob]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertarUsuarioJacob]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1823,7 +2098,7 @@ BEGIN
 
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ModificarDescripcionCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[ModificarDescripcionCuentaObjetivo]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1875,7 +2150,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ProcesarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[ProcesarMovimientos]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1983,12 +2258,12 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[RedimirCuentaObjetivo]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[RedimirCuentaObjetivo]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE     PROCEDURE [dbo].[RedimirCuentaObjetivo] 
+CREATE   PROCEDURE [dbo].[RedimirCuentaObjetivo] 
 	@inIdCuentaObjetivo INT,
 	@inFecha DATE,
 	@OutRedimirCuentaObjetivoId INT OUTPUT,
@@ -1996,32 +2271,38 @@ CREATE     PROCEDURE [dbo].[RedimirCuentaObjetivo]
 AS
 BEGIN
 	SET NOCOUNT ON;
-	--Se declaran variables
+
+	--SE DECLARAN VARIABLES
 	DECLARE @MontoTotalIntereses MONEY,
 			@MontoTotalCuentaObjetivo MONEY,
-			@inIdTipoMovimientoCO INT
+			@inIdTipoMovimientoCO INT,
+			@inNuevoIntAcumuladoInt MONEY,
+			@inIdTipoMovObjInt INT
 
 	DECLARE	@OutMovimientoCuentaObjId INT, 
 			@OutNuevoSaldo INT
 
 
-	--Se les asignan valores
+	--SE LES ASIGNAN VALORES
 	SELECT @MontoTotalIntereses = SUM(Monto)
-	FROM [dbo].[MovCuentaObj]
+	FROM [dbo].[MovCuentaObjIntereses]
 	WHERE IdCuentaObjetivo = @inIdCuentaObjetivo
 
 	SELECT @MontoTotalCuentaObjetivo = Saldo + @MontoTotalIntereses
 	FROM [dbo].[CuentaObjetivo]
 	WHERE id = @inIdCuentaObjetivo
 
-	--Verifica si no existe la cuenta objetivo
+	SET @inNuevoIntAcumuladoInt = 0
+	SET @inIdTipoMovObjInt = 2 -- DEBITO POR REDENCION DE INTERESES
+
+	--VERIFICA SI NO EXISTE LA CUENTA OBJETIVO
 	IF NOT EXISTS (
 		SELECT 1
 		FROM [dbo].[CuentaObjetivo]
 		WHERE id = @inIdCuentaObjetivo
 		)
 		BEGIN
-			SET @OutResultCode = 50017 --Codigo de retorno si la cuenta no existe.
+			SET @OutResultCode = 50017 --CODIGO DE RETORNO SI LA CUENTA NO EXISTE.
 			RETURN
 		END;
 
@@ -2031,20 +2312,30 @@ BEGIN
 
 		BEGIN TRANSACTION TSaveRedCuentaObj
 
-		--Se depositan los intereses en la CO
+		--SE RETIRAN LOS INTERESES
+		EXEC [dbo].[InsertarMovimientoCOIntereses]
+			@inIdCuentaObjetivo, 
+			@inIdTipoMovObjInt,
+			@inFecha,
+			@MontoTotalIntereses, 
+			@inNuevoIntAcumuladoInt, 
+			@OutMovimientoCuentaObjId OUTPUT, 
+			@OutResultCode OUTPUT
+
+		--SE DEPOSITAN LOS INTERESES EN LA CO
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
-			2,									--Deposito por redencion de intereses
+			2,									--DEPOSITO POR REDENCION DE INTERESES
 			@inFecha, 
 			@MontoTotalIntereses, 
 			@OutMovimientoCuentaObjId OUTPUT, 
 			@OutNuevoSaldo OUTPUT, 
 			@OutResultCode OUTPUT
 
-		--Se depositan el saldo de la CO en la Cuenta
+		--SE RETIRA EL SALDO DE LA CO 
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
-			3,									--Redencion de la CO"
+			3,									--REDENCION DE LA CO
 			@inFecha, 
 			@MontoTotalCuentaObjetivo, 
 			@OutMovimientoCuentaObjId OUTPUT, 
@@ -2080,7 +2371,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[selCO]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[selCO]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2098,7 +2389,7 @@ BEGIN
 	WHERE id = @id
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarCuentaAhorro]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2150,7 +2441,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarMovimientos]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarMovimientos]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2202,7 +2493,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SeleccionarPersona]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SeleccionarPersona]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2255,7 +2546,7 @@ BEGIN
 	SET NOCOUNT OFF
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[SP_AgregarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_AgregarBeneficiario]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2306,7 +2597,7 @@ BEGIN
 	RETURN @outErrorCode;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_BeneficiarioPorID]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_BeneficiarioPorID]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2322,7 +2613,7 @@ BEGIN
 	WHERE ValorDocumentoIdentidadBeneficiario = @ValorDocumentoIdentidadBeneficiario
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_CompararUsuario]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_CompararUsuario]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2339,7 +2630,7 @@ BEGIN
 	WHERE NombreUsuario = @Usuario and Pass = @Pass
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_EliminarBeneficiario]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_EliminarBeneficiario]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2355,7 +2646,7 @@ BEGIN
 	WHERE id = @inId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ObtenerBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_ObtenerBeneficiarios]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2371,7 +2662,7 @@ BEGIN
 	WHERE NumeroCuenta = @NumeroCuenta and Activo = 1
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ObtenerParentezco]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_ObtenerParentezco]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2387,7 +2678,7 @@ BEGIN
 	WHERE id = @ParentezcoId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_SeleccionarCuentasAhorroUsuarioPuedeVer]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_SeleccionarCuentasAhorroUsuarioPuedeVer]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2412,7 +2703,7 @@ BEGIN
 	SET NOCOUNT OFF;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TipoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TipoCuentaAhorro]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2426,7 +2717,7 @@ BEGIN
 	WHERE id = @inTipoCuentaAhorroId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TipoMoneda]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TipoMoneda]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2441,7 +2732,7 @@ BEGIN
 	WHERE id = @inTipoMonedaId
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_TodoCuentaAhorro]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_TodoCuentaAhorro]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2454,7 +2745,7 @@ BEGIN
 	FROM CuentaAhorro
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SP_VerificarPorcentajeBeneficiarios]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_VerificarPorcentajeBeneficiarios]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -2480,7 +2771,7 @@ BEGIN
 	RETURN @outErrorCode
 END
 GO
-/****** Object:  StoredProcedure [dbo].[VerCuentaObj]    Script Date: 1/14/2021 11:53:12 AM ******/
+/****** Object:  StoredProcedure [dbo].[VerCuentaObj]    Script Date: 1/17/2021 4:38:35 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
