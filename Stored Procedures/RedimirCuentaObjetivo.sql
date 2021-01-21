@@ -48,19 +48,6 @@ BEGIN
 			RETURN
 		END;
 
-	--VERIFICA SI EL SALDO DE LA CUENTA ES NEGATIVO
-	IF (
-		SELECT C.[Saldo]
-		FROM [dbo].[CuentaAhorro] C
-		INNER JOIN [dbo].[CuentaObjetivo] CO
-			ON C.NumeroCuenta = CO.NumeroCuentaPrimaria
-		WHERE C.NumeroCuenta = CO.NumeroCuentaPrimaria
-		) < 0
-		BEGIN
-			SET @OutResultCode  = 50018 --CODIGO DE RETORNO SI LA CUENTA TIENE EL SALDO NEGATIVO.
-			RETURN
-		END
-	
 	BEGIN TRY
 
 		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
