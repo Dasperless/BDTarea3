@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AppWebBD.Models.Consulta2>
+
+@{
+    ViewData["Title"] = "verConsulta2";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Listado Cuentas</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CuentaAhorroId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PromedioRetirosMes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCantidadMayorRetiros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaDeEjecucion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CuentaAhorroId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PromedioRetirosMes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaCantidadMayorRetiros)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeEjecucion)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

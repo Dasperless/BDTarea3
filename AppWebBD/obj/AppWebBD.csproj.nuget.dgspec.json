@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yeico\\Desktop\\BDTarea2\\AppWebBD\\AppWebBD.csproj": {}
+    "C:\\Users\\yeico\\Desktop\\BDTarea3\\AppWebBD\\AppWebBD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yeico\\Desktop\\BDTarea2\\AppWebBD\\AppWebBD.csproj": {
+    "C:\\Users\\yeico\\Desktop\\BDTarea3\\AppWebBD\\AppWebBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yeico\\Desktop\\BDTarea2\\AppWebBD\\AppWebBD.csproj",
+        "projectUniqueName": "C:\\Users\\yeico\\Desktop\\BDTarea3\\AppWebBD\\AppWebBD.csproj",
         "projectName": "AppWebBD",
-        "projectPath": "C:\\Users\\yeico\\Desktop\\BDTarea2\\AppWebBD\\AppWebBD.csproj",
+        "projectPath": "C:\\Users\\yeico\\Desktop\\BDTarea3\\AppWebBD\\AppWebBD.csproj",
         "packagesPath": "C:\\Users\\yeico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yeico\\Desktop\\BDTarea2\\AppWebBD\\obj\\",
+        "outputPath": "C:\\Users\\yeico\\Desktop\\BDTarea3\\AppWebBD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
