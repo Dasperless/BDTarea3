@@ -67,7 +67,7 @@ BEGIN
 		--SE DEPOSITAN LOS INTERESES EN LA CO
 		EXEC [dbo].[InsertarMovimientoCuentaObjetivo]
 			@inIdCuentaObjetivo, 
-			2,									--DEPOSITO POR REDENCION DE INTERESES
+			4,									--DEPOSITO POR REDENCION DE INTERESES
 			@inFecha, 
 			@MontoTotalIntereses, 
 			@OutMovimientoCuentaObjId OUTPUT, 
