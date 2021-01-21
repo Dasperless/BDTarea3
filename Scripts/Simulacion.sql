@@ -377,7 +377,7 @@ BEGIN
 	WHILE @lo2 <= @hi2
 	BEGIN
 		SELECT @inIdCuentaObjetivoInt = IdCuentaObjetivo
-			,@inIdTipoMovObjInt = 2
+			,@inIdTipoMovObjInt = 5
 			,@inFechaInt = @fechaOperacion
 			,@inMontoInt = 0
 			,@inNuevoIntAcumuladoInt = InteresesAcumulados
