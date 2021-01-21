@@ -26,14 +26,20 @@ BEGIN
 
 		--Se le asignan valores 
 		SELECT @idUser = P.Usuarioid
-		FROM [dbo].[Persona] P
+		FROM inserted i
 		INNER JOIN [dbo].[CuentaAhorro] C
-			ON C.Personaid = P.id
+			ON C.NumeroCuenta = i.NumeroCuentaPrimaria
+		INNER JOIN [dbo].[Persona] P
+			ON C.Personaid  = P.id
 
 		--Se obtiene la ip de la pc
-		SELECT @Ip = client_net_address
+		SELECT @Ip = CASE 
+				WHEN client_net_address = '<local machine>'
+					THEN '127.0.0.1'
+				ELSE client_net_address
+				END
 		FROM sys.dm_exec_connections
-		WHERE Session_id = @@SPID;
+		WHERE session_id = @@SPID;
 
 		--Se transforma la fila en XMl
 		SET @XMLAntes = (

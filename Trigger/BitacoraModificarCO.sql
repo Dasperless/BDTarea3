@@ -11,13 +11,27 @@ CREATE OR ALTER TRIGGER [dbo].[BitacoraModificarCO] ON [dbo].[CuentaObjetivo]
 AFTER UPDATE
 AS
 BEGIN
-	IF (ROWCOUNT_BIG() = 0) --Evita que el trigger se inicie si no se hizo ningun cambio.
-		RETURN;
+
+
+	IF (SELECT T1.id
+		FROM (
+				SELECT *
+				FROM inserted
+			
+				EXCEPT
+			
+				SELECT *
+				FROM deleted
+				) AS T1
+			) IS  NULL --Evita que el trigger se inicie si no se hizo ningun cambio.
+		BEGIN
+			RETURN;
+		END;
 	SET NOCOUNT ON;
 	IF NOT UPDATE(Estado) --Evita que se active el trigger si está borrando.
 		BEGIN 
 		--Se declaran variables
-		DECLARE @idTipoEvento INT = 5,
+		DECLARE @idTipoEvento INT = 5, --MODIFICAR CO
 				@idUser INT,
 				@XMLAntes XML,
 				@XMLDespues XML,
@@ -26,14 +40,20 @@ BEGIN
 
 		--Se le asignan valores 
 		SELECT @idUser = P.Usuarioid
-		FROM [dbo].[Persona] P
+		FROM inserted i
 		INNER JOIN [dbo].[CuentaAhorro] C
-			ON C.Personaid = P.id
+			ON C.NumeroCuenta = i.NumeroCuentaPrimaria
+		INNER JOIN [dbo].[Persona] P
+			ON C.Personaid  = P.id
 
 		--Se obtiene la ip de la pc
-		SELECT @Ip = client_net_address
+		SELECT @Ip = CASE 
+				WHEN client_net_address = '<local machine>'
+					THEN '127.0.0.1'
+				ELSE client_net_address
+				END
 		FROM sys.dm_exec_connections
-		WHERE Session_id = @@SPID;
+		WHERE session_id = @@SPID;
 
 		--Se genera el XMLAntes
 		SET @XMLAntes = (
@@ -69,7 +89,7 @@ BEGIN
 		SELECT	@IdTipoEvento,
 				@idUser,
 				@Ip,
-				@Fecha, -- [NOTA]: No se como obtener la fecha de operacion
+				@Fecha, 
 				@XMLAntes,
 				@XMLDespues
 		FROM inserted B
