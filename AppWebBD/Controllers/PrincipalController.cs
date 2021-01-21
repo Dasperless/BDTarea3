@@ -20,6 +20,7 @@ namespace AppWebBD.Controllers
         SP_TipoCuentaAhorro SP_ProcedureTipoCuentaAhorro = new SP_TipoCuentaAhorro();
         SP_CuentaObjetivo SP_ProcedureCuentaObjetivo = new SP_CuentaObjetivo();
         SP_Movimiento SP_ProcedureMovimiento = new SP_Movimiento();
+        SP_Consultas SP_consultas = new SP_Consultas();
         public static Usuario usuarioFijo { get; set; } = null;
         public static int cedulaAnterior { get; set; } = 0;
         public static int auxIS { get; set; }  = 0;
@@ -71,6 +72,27 @@ namespace AppWebBD.Controllers
                 List<CuentaAhorro> cuentaList = SP_ProcedureCuentaAhorro.ObtenerTodasLasCuentas().ToList();
                 return View("CuentasAhorro", cuentaList);
             }
+        }
+        public ActionResult verConsulta1()
+        {
+            
+            return View();
+        }
+        public ActionResult nDias()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("verConsulta2")]
+        public ActionResult verConsulta2(int cantDias)
+        {
+            List<Consulta2> cons2List = SP_consultas.SeleccionarConsulta2(cantDias).ToList();
+            return View(cons2List);
+        }
+        public ActionResult verConsulta3()
+        {
+            List<Consulta3> cons3List = SP_consultas.SeleccionarConsulta3().ToList();
+            return View(cons3List);
         }
         public ActionResult verBeneficiarios(int numeroCuenta)
         {

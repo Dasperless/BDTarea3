@@ -24,9 +24,9 @@
         <Parentezco Id="9" Nombre="Pareja" />
     </Parentezcos>
     <Tipo_Cuenta_Ahorro>
-        <TipoCuentaAhorro Id="1" Nombre="Proletario" IdTipoMoneda="1" SaldoMinimo="25000.00" MultaSaldoMin="3000.00" CargoMensual="5000" NumRetiroHumano="5" NumRetirosAutomatico="8" ComisionHumano="300" ComisionAutomatico="300" Interes="10" />
-        <TipoCuentaAhorro Id="2" Nombre="Profesional" IdTipoMoneda="1" SaldoMinimo="50000.00" MultaSaldoMin="3000.00" CargoMensual="15000" NumRetiroHumano="5" NumRetirosAutomatico="8" ComisionHumano="500" ComisionAutomatico="500" Interes="15" />
-        <TipoCuentaAhorro Id="3" Nombre="Exclusivo" IdTipoMoneda="1" SaldoMinimo="100000.00" MultaSaldoMin="3000.00" CargoMensual="30000" NumRetiroHumano="5" NumRetirosAutomatico="8" ComisionHumano="1000" ComisionAutomatico="1000" Interes="20" />
+        <TipoCuentaAhorro Id="1" Nombre="Proletario" IdTipoMoneda="1" SaldoMinimo="25000.00" MultaSaldoMin="3000.00" CargoMensual="5000" NumRetiroHumano="5" NumRetirosAutomatico="2" ComisionHumano="300" ComisionAutomatico="300" Interes="10" />
+        <TipoCuentaAhorro Id="2" Nombre="Profesional" IdTipoMoneda="1" SaldoMinimo="50000.00" MultaSaldoMin="3000.00" CargoMensual="15000" NumRetiroHumano="5" NumRetirosAutomatico="2" ComisionHumano="500" ComisionAutomatico="500" Interes="15" />
+        <TipoCuentaAhorro Id="3" Nombre="Exclusivo" IdTipoMoneda="1" SaldoMinimo="100000.00" MultaSaldoMin="3000.00" CargoMensual="30000" NumRetiroHumano="5" NumRetirosAutomatico="2" ComisionHumano="1000" ComisionAutomatico="1000" Interes="20" />
     </Tipo_Cuenta_Ahorro>
     <TipoMovimientos>
         <TipoMovimiento Id="1" Nombre="Compra" Tipo="Debito" />

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "nDias";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+<body>
+    <form asp-action="verConsulta2">
+        <div class="form-group">
+            <label for="inputUser">Cantidad de dias:</label>
+            <input type="number" class="form-control" id="inputUser" placeholder="Ndias" name="cantDias">
+        </div>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </form>
+</body>

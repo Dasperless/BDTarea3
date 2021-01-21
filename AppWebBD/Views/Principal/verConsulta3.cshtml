@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AppWebBD.Models.Consulta3>
+
+@{
+    ViewData["Title"] = "verConsulta3";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>Listado de Beneficiarios</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorDocIdentidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditoTotalRecibido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MayorAporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadDeAportes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorDocIdentidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditoTotalRecibido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MayorAporte)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CantidadDeAportes)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })
