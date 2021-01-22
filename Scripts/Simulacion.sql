@@ -4,11 +4,11 @@
 	--Path Dario: C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
-	DECLARE @TablaFechasOperacion TABLE (
+	DECLARE @TablaFechasOperacion TABLE (	
 		Sec INT identity(1, 1),
 		Fecha DATE
 		) 
@@ -419,7 +419,7 @@ BEGIN
 						@CuentaAhorra,
 						@fechaOperacion, 
 						@OutRedimirCuentaObjetivoId OUTPUT,
-						@OutResultCodeCORedm OUTPUT	 		
+						@OutResultCodeCORedm OUTPUT
 				END;
 
 			--INSERTA MOVIMIENTOS EN LA CUENTA OBJETIVO SI ES EL DIA DE AHORRO O ES EL ULTIMO DIA DEL MES Y EL DIA DE AHORRO ES MAYOR.
@@ -440,25 +440,50 @@ BEGIN
 
 	SET @fechaOperacion  = DATEADD(DAY, 1, @fechaOperacion)
 END;
+SELECT * FROM Errores ORDER BY GETDATE DESC
 --SELECT * FROM Usuario
 --SELECT * FROM UsuarioPuedeVer
 --SELECT * FROM Persona
 --SELECT * FROM Beneficiarios
-SELECT * FROM CuentaAhorro CA
-Join [dbo].[MovimientoCuentaAhorro] MCA
-ON MCA.CuentaAhorroid = Ca.id
-WHERE CA.NumeroCuenta = 86073678 
+--SELECT * FROM CuentaAhorro CA
+--Join [dbo].[MovimientoCuentaAhorro] MCA
+--ON MCA.CuentaAhorroid = Ca.id
+--WHERE CA.NumeroCuenta = 86073678 
+--SELECT * FROM MovCuentaObj
 
+--CUENTA OBJETIVO, MOVIMIENTOS DE LA CUENTA OBJETIVO, MOVIMIENTOS DE LA CUENTA OBJETIVO INTERESES, TIPO DE MOVIMIENTO OBJ INT
 SELECT * FROM CuentaObjetivo CO
 JOIN MovCuentaObj M 
-ON M.IdCuentaObjetivo = CO.id
+	ON M.IdCuentaObjetivo = CO.id
+JOIN TMovCuentaObj TM
+	ON TM.id = M.IdTipoMovObj 
+--JOIN MovCuentaObjIntereses MCI
+--	ON MCI.IdCuentaObjetivo = Co.id
+--JOIN TMovCuentaObjIntereses TMI
+--	ON TMi.id = MCI.IdTipoMovObj
+--WHERE MCI.Monto > 0
+ORDER BY IdCuentaAhorro ASC
+
+--CUENTA AHORRO, MOVIMIENTOS CUENTA AHORRO, TIPO DE MOVIMIENTO CUENTA AHORRO
+SELECT * FROM CuentaAhorro CA
+JOIN MovimientoCuentaAhorro MCA
+	ON MCA.CuentaAhorroid = CA.id
+JOIN TipoMovimientoCuentaAhorro TM
+	ON TM.id = MCA.TipoMovimientoCuentaAhorroid
+--WHERE MCA.TipoMovimientoCuentaAhorroid = 11 OR MCA.TipoMovimientoCuentaAhorroid = 10
+ORDER BY CA.id ASC
+
 --SELECT * FROM EstadoCuenta
 --SELECT * FROM MovimientoCuentaAhorro 
 --SELECT * FROM MovCuentaObjIntereses
 --SELECT * FROM FechaOperacion
 
+SELECT * FROM Eventos E
+Where idTipoEvento = 5
+
+
 --DELETE Eventos
---DELETE Usuario
+--DELETE Usuario	
 --DELETE CuentaObjetivo
 --DELETE UsuarioPuedeVer
 --DELETE EstadoCuenta
@@ -469,6 +494,6 @@ ON M.IdCuentaObjetivo = CO.id
 --DELETE Beneficiarios
 --DELETE FechaOperacion
 --DELETE MovCuentaObjIntereses
-
+	
 --SELECT * FROM [dbo].[Errores]
 --SELECT * FROM TMovCuentaObj
