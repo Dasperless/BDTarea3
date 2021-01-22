@@ -1,9 +1,9 @@
 DECLARE
- @OutListadoBeneficiariosId INT
+ @OutCuentasObjetivosIncompletasId INT
  ,@OutResultCode INT
-EXEC [dbo].[Consulta3]
-@OutListadoBeneficiariosId OUTPUT,
+EXEC [dbo].[Consulta1]
+@OutCuentasObjetivosIncompletasId OUTPUT,
 @OutResultCode OUTPUT
 
-SELECT @OutListadoBeneficiariosId, @OutResultCode
+SELECT @OutCuentasObjetivosIncompletasId, @OutResultCode
 select * from errores 

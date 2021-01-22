@@ -4,7 +4,7 @@
 	--Path Dario: C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml
 	SET @xmlData = (
 			SELECT *
-			FROM OPENROWSET(BULK 'C:\Users\dvarg\Desktop\TEC\2020\Segundo Semestre\Bases de datos\Proyectos\Proyecto 3\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
+			FROM OPENROWSET(BULK 'C:\Users\yeico\Desktop\BDTarea3\XML\Datos-Tarea3.xml', SINGLE_BLOB) AS xmlData
 			)
 
 	--Se declaran las tablas.
