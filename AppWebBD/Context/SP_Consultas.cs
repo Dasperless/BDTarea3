@@ -9,6 +9,37 @@ namespace AppWebBD.Context
     public class SP_Consultas
     {
         string connectionString = "Data Source=LAPTOP-140FDP4P;Initial Catalog=ProyectoBD1;Integrated Security=true;";
+        public IEnumerable<Consulta1> SeleccionarConsulta1()
+        {
+            var listaConsulta1 = new List<Consulta1>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("Consulta1", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@OutCuentasObjetivosIncompletasId", 0);
+                cmd.Parameters.AddWithValue("@OutResultCode", 0);
+
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    var datosConsulta1 = new Consulta1();
+                    datosConsulta1.id = Convert.ToInt32(dr["id"]);
+                    datosConsulta1.COId = Convert.ToInt32(dr["COId"]);
+                    datosConsulta1.CACodigo = Convert.ToInt32(dr["CACodigo"]);
+                    datosConsulta1.descripción = dr["descripción"].ToString();
+                    datosConsulta1.cantDepositosR = Convert.ToInt32(dr["cantDepositosR"]);
+                    datosConsulta1.cantDepositosT = Convert.ToInt32(dr["cantDepositosT"]);
+                    datosConsulta1.montoDebitadoReal = Convert.ToDouble(dr["montoDebitadoReal"]);
+                    datosConsulta1.montoDebitadoTotal = Convert.ToDouble(dr["montoDebitadoTotal"]);
+                    listaConsulta1.Add(datosConsulta1);
+                }
+                con.Close();
+            }
+            return listaConsulta1;
+        }
         public IEnumerable<Consulta2> SeleccionarConsulta2(int? Ndias) 
         {
             var listaConsulta2 = new List<Consulta2>();

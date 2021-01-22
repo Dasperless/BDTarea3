@@ -1,0 +1,73 @@
+﻿@model IEnumerable<AppWebBD.Models.Consulta1>
+
+@{
+    ViewData["Title"] = "verConsulta1";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h1>cuentasObjetivosIncompletas</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CACodigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripción)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantDepositosR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantDepositosT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.montoDebitadoReal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.montoDebitadoTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CACodigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripción)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cantDepositosR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cantDepositosT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.montoDebitadoReal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.montoDebitadoTotal)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("<--Volver", "volverIndex", new { })

@@ -75,8 +75,8 @@ namespace AppWebBD.Controllers
         }
         public ActionResult verConsulta1()
         {
-            
-            return View();
+            List<Consulta1> cons1List = SP_consultas.SeleccionarConsulta1().ToList();
+            return View(cons1List);
         }
         public ActionResult nDias()
         {

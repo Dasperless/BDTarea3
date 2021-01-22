@@ -523,3 +523,4 @@ C:\Users\yeico\Desktop\BDTarea3\AppWebBD\obj\Debug\netcoreapp3.1\AppWebBD.genrun
 C:\Users\yeico\Desktop\BDTarea3\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verConsulta3.cshtml.g.cs
 C:\Users\yeico\Desktop\BDTarea3\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\nDias.cshtml.g.cs
 C:\Users\yeico\Desktop\BDTarea3\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verConsulta2.cshtml.g.cs
+C:\Users\yeico\Desktop\BDTarea3\AppWebBD\obj\Debug\netcoreapp3.1\Razor\Views\Principal\verConsulta1.cshtml.g.cs
